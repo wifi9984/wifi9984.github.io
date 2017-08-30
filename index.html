@@ -160,6 +160,62 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-android-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&emsp; </p>
+<p>##【Andorid学习经验分享·1】刚入坑的时候那些令人窒息的操作</p>
+<p>&emsp;&emsp;续坑。</p>
+<p>&emsp;&emsp;这篇讲一讲我自己还是一个刚下定决心入坑Android的小白的时候碰到的种种问题。</p>
+<p>####搭建Java开发环境<br>&emsp;&emsp;一开始最头疼的问题就是<strong>开发环境</strong>的搭建了，第一步肯定是从<strong>JDK</strong>的安装开始，啊不，从下载开始。目前最新的JDK版本为1.8(是JDK不是JRE，JRE只是Java运行环境，JDK才是开发包)，在官网选择win x64的版本下载就可以了（32位的机子应该淘汰了）。下载安装后JDK是不能用的，因为需要配置<strong>环境变量</strong>。当时网上Andorid学习资源少之又少，连JDK如何配置都是在IDE报错之后才慢慢学会的。JDK安装最头疼的点就是环境变量的配置了，少打一个分号什么的都会报错。好在现在Windows 10配置环境变量只需增加条目即可，要检验JDK是否安装正确，不用按网上说的输命令测试，只要看看打开Android Studio时是否出现JDK错误就行了（好耿直的方法）。如果你玩过MC（我的世界），那么JDK环境变量配置应该不是个问题。</p>
+<p>####安装IDE(Android Studio)<br>&emsp;&emsp;Android Studio的下载和安装都不是啥事儿（运行exe在安装目录\bin\studio64.exe）。但是首次打开就能碰上一堆麻烦。比如说，第一次运行，Android Studio会要求你设置<strong>代理（Proxy）</strong>来访问相关的资源链接（Google嘛，你懂的），我用的是ss代理所以配置<strong>代理地址127.0.0.1端口1080</strong>（即使用本机的代理）（考虑到现在ss不给搜。。。先留个方法在这里）然后是选择主题之类的一些个性化设置，英语功底可以的话就很轻松了。然后第一次运行就会下载SDK。主界面的各种操作也是很简单直观，自己体会就OK了。</p>
+<p>####Android SDK<br>&emsp;&emsp;然后还有一个问题就是SDK，SDK全称Software Development Kit（软件开发包），Android SDK通过<strong>SDK Manager</strong>来管理，同样也是<strong>需要代理</strong>的。没有科学上网工具的同学可以在SDK Manager-Tools-Options里面设置成国内的镜像站代理，并且启用HTTPS代理。Android SDK包含了各个版本的SDK以及各种Tools。首先必要的资源在第一次运行Android Studio的时候就会帮你下载好，一些可选的内容在这里讲一下：首先是你认为的开发时常用的Android版本对应的SDK，这个在新建项目的时候会让你选择一个最低运行版本，需要下载对应的SDK。在Android具体系统的SDK文件目录下，system_image为系统镜像，跑虚拟机用，可以不用下载。不管电脑配置咋样我还是<strong>建议用真机进行USB调试</strong>。system_image在AVD Manager里面配置好了就可以运行虚拟机，可以体验一下Android系统的新特性。在设定SDK安装地址的时候不允许包含空格（虽然Windows系统允许空格）。</p>
+<p>####Gradle<br>&emsp;&emsp;然后是一个伴随你整个入坑过程的报错源头：Gradle。Gradle是Android的构建工具，用来编译、打包、构建……创建项目、调试项目、发布APK，都会用到Gradle。IDE会自带Gradle，但是不是完整包。建议去<strong>镜像站下载Gradle最新版的完整包</strong>附一个<a href="http://download.csdn.net/download/t6546545/9732412" target="_blank" rel="external">CSDN的Gradle 3.3完整包下载地址</a>解压到本地C:\Users\admin.gradle\wrapper\dists相应版本的文件夹下，在Android Studio的<strong>setting中启用offline work</strong>，避免无法使用代理造成的各种尴尬。比如，如果你的没有代理裸连Gradle，可能在构建新项目的时候一直卡在“Gradle:build”不动。另外，当你的代码有语法错误的时候Gradle会报错，也就是要调试的话必须保证全部代码没有被红色标记。切记，在打开项目之后，要等到进度条Gradle:build完成后再去写代码。</p>
+<p>&emsp;<br>&emsp;&emsp;——以上是我搭建开发环境时碰到的一些问题，如果你也碰到了或者需要提前防范，记得拿去参考。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/30/android-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-android-pre" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
