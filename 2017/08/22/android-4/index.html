@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | WiFi9984的个人主页</title>
+  <title>【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局 | WiFi9984的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="WiFi9984的个人主页">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="&amp;emsp;&amp;emsp;8-22填坑。这十几天里，闭关了几天研究SQLite，又出去旅行了一周，所以拖更了QAQ &amp;emsp;&amp;emsp;刚开始接触Android开发的时候，如果高中有做过Visual Basic程序设计，就很容易理解所谓的面向对象编程（没有对象，下一个）。 &amp;emsp;&amp;emsp;以高中教科书里的VB为例，VB工程的控件都在一个窗体（Form）里面，控件的实例化需要定义各种属性（">
+<meta name="keywords" content="Android,学习,分享,Android布局">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局">
+<meta property="og:url" content="http://yoursite.com/2017/08/22/android-4/index.html">
 <meta property="og:site_name" content="WiFi9984的个人主页">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;8-22填坑。这十几天里，闭关了几天研究SQLite，又出去旅行了一周，所以拖更了QAQ &amp;emsp;&amp;emsp;刚开始接触Android开发的时候，如果高中有做过Visual Basic程序设计，就很容易理解所谓的面向对象编程（没有对象，下一个）。 &amp;emsp;&amp;emsp;以高中教科书里的VB为例，VB工程的控件都在一个窗体（Form）里面，控件的实例化需要定义各种属性（">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-09-05T13:52:44.231Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WiFi9984的个人主页">
+<meta name="twitter:title" content="【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;8-22填坑。这十几天里，闭关了几天研究SQLite，又出去旅行了一周，所以拖更了QAQ &amp;emsp;&amp;emsp;刚开始接触Android开发的时候，如果高中有做过Visual Basic程序设计，就很容易理解所谓的面向对象编程（没有对象，下一个）。 &amp;emsp;&amp;emsp;以高中教科书里的VB为例，VB工程的控件都在一个窗体（Form）里面，控件的实例化需要定义各种属性（">
   
     <link rel="alternative" href="/atom.xml" title="WiFi9984的个人主页" type="application/atom+xml">
   
@@ -158,36 +163,78 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-android-4" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/22/android-4/" class="archive-article-date">
-  	<time datetime="2017-08-21T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/22/android-4/">【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局</a>
+    <h1 class="article-title" itemprop="name">
+      【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/08/22/android-4/" class="archive-article-date">
+  	<time datetime="2017-08-21T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&emsp;&emsp;8-22填坑。这十几天里，闭关了几天研究SQLite，又出去旅行了一周，所以拖更了QAQ</p>
+<p>&emsp;&emsp;刚开始接触Android开发的时候，如果高中有做过Visual Basic程序设计，就很容易理解所谓的面向对象编程（没有对象，下一个）。</p>
+<p>&emsp;&emsp;以高中教科书里的VB为例，VB工程的控件都在一个窗体（Form）里面，控件的实例化需要定义各种属性（比如name，caption，visible….），我们可以针对每个控件创建事件处理代码，比如command1_click。学过VB的同学可以好好回忆一下。<br><a id="more"></a></p>
+<p>&emsp;&emsp;在Android里面，工程就是你创建的package（app），窗体可以粗略理解为Activity，控件就是Button，TextView，ImageView……然后，VB里的事件代码，在Android里通过Java代码实现（Kotlin语言目前还没有广泛使用）</p>
+<p>——–分割线——–</p>
+<p>&emsp;&emsp;与VB不同的是，VB窗体可以通过自带网格参考线来定义布局，而Android应用为了适应不同尺寸以及分辨率的显示屏，需要用严谨的布局方式，也就是LinearLayout，RelativeLayout……通过设定布局形式来在不同屏幕上呈现相同的效果<em>（知识点：dp的概念）</em>。其中的原理就是：VB的窗体可以自由调整大小，大小以px（像素）计算。而手机上，APP默认就是铺满整个屏幕的。而手机屏幕也很复杂，不仅有4.7，5.0，5.5这样的尺寸，也有720P，1080P，2K这样的分辨率。</p>
+<p>&emsp;&emsp;假如用px作为单位，会出现好多问题。</p>
+<p>&emsp;&emsp;问题一：如果你开发的时候设计的是1080P的分辨率，那么这款APP在720P的显示屏上运行的时候，由于分辨率的限制，就无法显示完整的内容，如果在2K屏上运行，就会有一片空白区域。</p>
+<p>&emsp;&emsp;问题二：如果你开发的时候也用1080P，那么在5.5英寸1080P屏幕和5.0寸1080P屏幕上面，整个界面是被按比例缩放的，一个100*60px的按钮，在两个屏幕上的大小就不一样了。</p>
+<p>&emsp;&emsp;解决方法：引入dp的概念。dp=dip:<em>device independent pixels</em>(设备独立像素)，如果一个设备显示屏幕的像素密度为160ppi，那么1dp刚好对应1px。按照比例关系，像素密度越高的屏幕，1dp对应的像素点越多。这样有一个很直接的好处就是，创建一个100*60dp的按钮，放到不同ppi的屏幕下，显示出来的大小是几乎一样的（至于为什么是几乎，可以去了解一下知乎里面的一个问题<a href="https://www.zhihu.com/question/20697111" target="_blank" rel="external">传送门</a>）</p>
+<p>&emsp;&emsp;顺便解释一下上面提到的两个非常常用的基本布局：LinearLayout，RelativeLayout。LinearLayout翻译过来是<strong>线性布局</strong>，就是大致确定布局内部的控件排列方向为横向或者纵向。RelativeLayout翻译过来是<strong>相对布局</strong>，可以确定控件与布局四边的位置和与指定一个控件的相对位置。很多时候这些Layout都是内部<strong>嵌套</strong>着Layout的。用于呈现复杂的UI界面。</p>
+<p>&emsp;&emsp;理解上面几段文字后你大概就明白了为什么布局设计要如此严谨了。以后当你发现Android Studio模拟设备和你手上的真机显示效果不一样时，记得回到XML文件里面去分析一下自己的布局是否严谨。</p>
+<p>&emsp;&emsp;今天就先讲这么一小段吧。后续还会有针对控件的解读（涉及Java类的继承）和针对源码书写（涉及Java语法）的解读。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>听说你正准备请我吃糖，吼啊~<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://github.com/wifi9984/wifi9984.github.io/blob/master/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://github.com/wifi9984/wifi9984.github.io/blob/master/img/weixinpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -211,7 +258,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -224,310 +271,102 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/22/android-4/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/07/android-bug-1/" class="archive-article-date">
-  	<time datetime="2017-08-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-07</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/07/android-bug-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">【Android崩溃经验分享·1】有句妈卖皮我一定要讲</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/07/android-bug-1/">【Android崩溃经验分享·1】有句妈卖皮我一定要讲</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Bug</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">心态爆炸</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Fragment</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android错误集锦/" class="article-tag-list-link color2">Android错误集锦</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/06/android-3/" class="archive-article-date">
-  	<time datetime="2017-08-05T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/06/android-3/">【Android学习经验分享·3】对于Activity的解读</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分享</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Activity</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android学习经验/" class="article-tag-list-link color2">Android学习经验</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/02/android-2/" class="archive-article-date">
-  	<time datetime="2017-08-01T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/02/android-2/">【Android学习经验分享·2】入坑到入土线路规划</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分享</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android学习经验/" class="article-tag-list-link color2">Android学习经验</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/01/android-1/" class="archive-article-date">
-  	<time datetime="2017-07-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/01/android-1/">【Andorid学习经验分享·1】刚入坑的时候那些令人窒息的操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分享</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android学习经验/" class="article-tag-list-link color2">Android学习经验</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/31/android-pre/" class="archive-article-date">
-  	<time datetime="2017-07-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/31/android-pre/">【前言】【Android学习经验分享】关于这系列笔记的一些事儿</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分享</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android学习经验/" class="article-tag-list-link color2">Android学习经验</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -550,8 +389,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
