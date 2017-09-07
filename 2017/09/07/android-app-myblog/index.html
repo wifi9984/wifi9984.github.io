@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>【前言】【Android学习经验分享】关于这系列笔记的一些事儿 | WiFi9984的个人主页</title>
+  <title>震惊！短短几行代码搞定个人博客APP | WiFi9984的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;emsp;&amp;emsp;咳咳，笔记更新从今晚开始。这一系列笔记会不定时更新。  &amp;emsp;&amp;emsp;趁着高三长达3个半月的暑假，我决定在家搞些事情。我自己在自学Android应用程序开发，这篇笔记也算是边学边出教程吧。所以专业的知识点可能会比较粗糙。主要还是希望给真·真·真·零基础的fresher提供一些指导。不会出现大量代码，适合同学们用零碎的时间学习借鉴我的方法。希望能帮助到同学们~ &amp;e">
-<meta name="keywords" content="Android,学习,分享">
+  <meta name="description" content="&amp;emsp;&amp;emsp;说出来你估计也信，我用不到1小时的时间搭出了一个个人博客的APP。 &amp;emsp;&amp;emsp;再骚一点，全程的手打代码居然不超过50行！">
+<meta name="keywords" content="Android,APP,WebView,个人博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【前言】【Android学习经验分享】关于这系列笔记的一些事儿">
-<meta property="og:url" content="http://yoursite.com/2017/07/31/android-pre/index.html">
+<meta property="og:title" content="震惊！短短几行代码搞定个人博客APP">
+<meta property="og:url" content="http://yoursite.com/2017/09/07/android-app-myblog/index.html">
 <meta property="og:site_name" content="WiFi9984的个人主页">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;咳咳，笔记更新从今晚开始。这一系列笔记会不定时更新。  &amp;emsp;&amp;emsp;趁着高三长达3个半月的暑假，我决定在家搞些事情。我自己在自学Android应用程序开发，这篇笔记也算是边学边出教程吧。所以专业的知识点可能会比较粗糙。主要还是希望给真·真·真·零基础的fresher提供一些指导。不会出现大量代码，适合同学们用零碎的时间学习借鉴我的方法。希望能帮助到同学们~ &amp;e">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;说出来你估计也信，我用不到1小时的时间搭出了一个个人博客的APP。 &amp;emsp;&amp;emsp;再骚一点，全程的手打代码居然不超过50行！">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-05T13:17:16.056Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/wifi9984/wifi9984.github.io/master/img/android-app-blog-main.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/wifi9984/wifi9984.github.io/master/img/android-app-blog-navigation.jpg">
+<meta property="og:updated_time" content="2017-09-07T14:27:22.741Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【前言】【Android学习经验分享】关于这系列笔记的一些事儿">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;咳咳，笔记更新从今晚开始。这一系列笔记会不定时更新。  &amp;emsp;&amp;emsp;趁着高三长达3个半月的暑假，我决定在家搞些事情。我自己在自学Android应用程序开发，这篇笔记也算是边学边出教程吧。所以专业的知识点可能会比较粗糙。主要还是希望给真·真·真·零基础的fresher提供一些指导。不会出现大量代码，适合同学们用零碎的时间学习借鉴我的方法。希望能帮助到同学们~ &amp;e">
+<meta name="twitter:title" content="震惊！短短几行代码搞定个人博客APP">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;说出来你估计也信，我用不到1小时的时间搭出了一个个人博客的APP。 &amp;emsp;&amp;emsp;再骚一点，全程的手打代码居然不超过50行！">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/wifi9984/wifi9984.github.io/master/img/android-app-blog-main.jpg">
   
     <link rel="alternative" href="/atom.xml" title="WiFi9984的个人主页" type="application/atom+xml">
   
@@ -163,42 +166,52 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-android-pre" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-android-app-myblog" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      【前言】【Android学习经验分享】关于这系列笔记的一些事儿
+      震惊！短短几行代码搞定个人博客APP
     </h1>
   
 
         
-        <a href="/2017/07/31/android-pre/" class="archive-article-date">
-  	<time datetime="2017-07-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-31</time>
+        <a href="/2017/09/07/android-app-myblog/" class="archive-article-date">
+  	<time datetime="2017-09-06T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&emsp;&emsp;咳咳，笔记更新从今晚开始。这一系列笔记会不定时更新。 </p>
-<p>&emsp;&emsp;趁着高三长达3个半月的暑假，我决定在家搞些事情。我自己在自学Android应用程序开发，这篇笔记也算是边学边出教程吧。所以专业的知识点可能会比较粗糙。主要还是希望给<strong>真·真·真·零基础的fresher</strong>提供一些指导。不会出现大量代码，适合同学们用零碎的时间学习借鉴我的方法。希望能帮助到同学们~</p>
-<p>&emsp;&emsp;由于之前在高中空闲时间也零零碎碎地积累了一些关于Android应用开发的知识，所以我在开始学习时就为自己制定好了学习路线。</p>
-<p>&emsp;&emsp;<strong>不妨整理一下我高中积累的各种基础……</strong></p>
-<a id="more"></a>
-<h4 id="1、Java略胜于无的基础"><a href="#1、Java略胜于无的基础" class="headerlink" title="1、Java略胜于无的基础"></a>1、Java略胜于无的基础</h4><p>&emsp;&emsp;高中的我没有时间（其实就是懒）学习Java的各种概念，只是对基础语法有些了解。通俗的来讲就是看的懂代码在讲些什么但是不知道原理，所以让我自己写也只能依样画葫芦地去做。</p>
-<h4 id="2、Android-Studio的基本操作"><a href="#2、Android-Studio的基本操作" class="headerlink" title="2、Android Studio的基本操作"></a>2、Android Studio的基本操作</h4><p>&emsp;&emsp;Android Studio就是一个Android集成开发环境（简称IDE）啦。关于Android Studio的各种操作以及我的一些故事应该在后面会讲到吧。。。（先挖个坑）咳咳，这是个全英文的IDE，所以……对，要有一定英语水平。</p>
-<h4 id="3、Android-iOS（统称移动端）用户界面（UI）基础"><a href="#3、Android-iOS（统称移动端）用户界面（UI）基础" class="headerlink" title="3、Android/iOS（统称移动端）用户界面（UI）基础"></a>3、Android/iOS（统称移动端）用户界面（UI）基础</h4><p>&emsp;&emsp;没错，高中没怎么学习Java，倒是先去熟悉UI设计了。阅读了<a href="https://material.io/guidelines/material-design/introduction.html" target="_blank" rel="external">Material Design开发文档</a>以及苹果的<a href="https://developer.apple.com/design/" target="_blank" rel="external">iOS人机交互指南</a>（我看的是英文原版，不过貌似都有中文翻译过的版本）。这里要提一个事儿了，许多程序员代码写得6但是自己做的project的UI丑的不忍直视，我觉得是学习顺序的锅。尤其是做移动端的，Android/iOS两大饭碗的UI设计规范一定要熟悉（我不会说QQ微信微博其实都违背了Android设计原则的）。这块内容因为学的比较深入所以提的有点多……</p>
-<h4 id="4、Android-API-Guides-Google霸霸提供的开发者文档"><a href="#4、Android-API-Guides-Google霸霸提供的开发者文档" class="headerlink" title="4、Android API Guides(Google霸霸提供的开发者文档)"></a>4、Android API Guides(Google霸霸提供的开发者文档)</h4><p>&emsp;&emsp;由于没钱买Mac开发iOS，我也没怎么去看iOS的知识。<a href="https://developer.android.com" target="_blank" rel="external">developer.android.com</a>自己可以去看看。可以学习到不少Google这个Android系统开发者希望我们APP开发者去做的事情（这就是所谓的‘规范’吧）。</p>
-<h4 id="5、严格遵循大小写和空格！"><a href="#5、严格遵循大小写和空格！" class="headerlink" title="5、严格遵循大小写和空格！"></a>5、严格遵循大小写和空格！</h4><p>&emsp;&emsp;这是个很好的规范，从规范输入‘iPhone 7 Plus’开始。写代码的时候你会感谢这个强迫症的。</p>
-<h4 id="6、一定的盲打能力。"><a href="#6、一定的盲打能力。" class="headerlink" title="6、一定的盲打能力。"></a>6、一定的盲打能力。</h4><p>&emsp;&emsp;这个并不是必须的，只是打字效率高也算是一种生产力吧。</p>
-<p>&emsp; </p>
-<p>&emsp;&emsp;大概也就这些吧，看上去挺少的，但是零零碎碎的积累这些的效果似乎比一次性课程学习要来得有效。</p>
-<p>&emsp;&emsp;看到这里先别慌，这篇笔记是给<strong>真·真·真·零基础</strong>的同学写的。我的学习经验只是作为一个导向。（不过仔细一想我上面提到的一些东西是网上的教程没有的哦）</p>
-<p>&emsp;&emsp;嗯，今天晚上就这样起个头吧。现在我白天在学习，晚上睡前这几个小时用来写写笔记，对我自己而言也是知识的复习。行，给自己加个油，明天开始挖坑/填坑。</p>
-<p>&emsp;&emsp;——2017-7-31</p>
+        <p>&emsp;&emsp;说出来你估计也信，我用不到1小时的时间搭出了一个个人博客的APP。</p>
+<p>&emsp;&emsp;再骚一点，全程的手打代码居然不超过50行！<br><a id="more"></a></p>
+<p>&emsp;&emsp;emmmm….好吧其实过程无比简单，只是利用了WebView控件。</p>
+<p>&emsp;&emsp;先给你们看看效果：</p>
+<p><img src="https://raw.githubusercontent.com/wifi9984/wifi9984.github.io/master/img/android-app-blog-main.jpg" alt="主界面"></p>
+<p>&emsp;&emsp;要实现上面的效果，其实非常简单。</p>
+<h2 id="1-创建Project"><a href="#1-创建Project" class="headerlink" title="1.创建Project"></a>1.创建Project</h2><p>&emsp;&emsp;打开功能健全的Android Studio，new一个project。导入模板的时候选择<em>empty activity</em>就可以了。</p>
+<h2 id="2-设置Style"><a href="#2-设置Style" class="headerlink" title="2.设置Style"></a>2.设置Style</h2><p>&emsp;&emsp;首先来到布局文件activity_main.xml，直接把根节点设置为WebView，宽高肯定都是match_parent了，如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">WebView</span></span></div><div class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/web_blog"</span></span></div><div class="line"><span class="tag">    <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></div><div class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></div><div class="line">&lt;/WebView&gt;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这样就在主界面整个窗体上放了一个WebView控件。但是我们回到设计视图，发现窗口还有Action Bar……这就需要用一些手段来去除这个东西了。</p>
+<p>&emsp;&emsp;打开MainActivity.java，我们要做的就是先把MainActivity声明里面的继承修改一下。默认是AppCompatActivity（默认带标题）修改为Activity。如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;...&#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;然后在onCreate()方法里面写上（先后关系不能乱哦）：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">requestWindowFeature(Window.FEATURE_NO_TITLE);</div><div class="line">setContentView(R.layout.activity_main);</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;这样调试一下就看到Action Bar已经消失了，WebView已经铺满了整个页面。但是，状态栏颜色还是不和谐。我的解决方法是在colors.xml里面把colorPrimaryDark修改为我的网页的顶部颜色。</p>
+<p>&emsp;&emsp;这样一来再去调试发现和谐了一些。那接下来去加载一下WebView</p>
+<h2 id="3-加载网页"><a href="#3-加载网页" class="headerlink" title="3.加载网页"></a>3.加载网页</h2><p>&emsp;&emsp;WebView的加载很简单，只需在onCreate()方法里添加几行代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//初始化控件</span></div><div class="line">web_blog = findViewById(R.id.web_blog);</div><div class="line"><span class="comment">//通过loadUrl()方法来设置需要加载的网页</span></div><div class="line">web_blog.loadUrl(<span class="string">"https://wifi9984.github.io"</span>);</div><div class="line"><span class="comment">//这个方法必须要写</span></div><div class="line">web_blog.setWebViewClient(<span class="keyword">new</span> WebViewClient());</div><div class="line"><span class="comment">//如果网页中包含JavaScript的话需要允许运行js</span></div><div class="line">WebSettings settings = web_blog.getSettings();</div><div class="line">settings.setJavaScriptEnabled(<span class="keyword">true</span>);</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;这样再去调试一遍呢？Ooooops！为什么无法加载？？？</p>
+<p>&emsp;&emsp;道理很简单…我们还需要在Manifest.xml里面添加联网权限许可……<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.INTERNET"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>需要注意的是，uses-permission需要添加在application节点上面！</strong></p>
+<h2 id="4-其他小bug"><a href="#4-其他小bug" class="headerlink" title="4.其他小bug"></a>4.其他小bug</h2><p>&emsp;&emsp;首先，在滑动网页的时候我们会发现滑倒顶或者到底都会出现阴影动效。我个人感觉有点影响美观。很简单，在xml里面可以去掉。直接在WebView节点下设置fadingEdge和overScrollMode。完成后如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">WebView</span></span></div><div class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/web_blog"</span></span></div><div class="line"><span class="tag">    <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></div><div class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></div><div class="line"><span class="tag">    <span class="attr">android:fadingEdge</span>=<span class="string">"none"</span></span></div><div class="line"><span class="tag">    <span class="attr">android:overScrollMode</span>=<span class="string">"never"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">WebView</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;然后是用户体验的bug，就是默认情况下按返回键是直接退出APP回到系统界面的，我们同样需要修改这个操作。</p>
+<p>&emsp;&emsp;方法也比较简单，在MainActivity.java里，覆盖onKeyDown的方法。代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onKeyDown</span><span class="params">(<span class="keyword">int</span> keyCode, KeyEvent event)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(keyCode == KeyEvent.KEYCODE_BACK)&#123;</div><div class="line">            <span class="keyword">if</span>(web_blog.canGoBack())&#123;</div><div class="line">                web_blog.goBack();</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                System.exit(<span class="number">0</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.onKeyDown(keyCode, event);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;这样就可以了。但是，但是，但是！如果你的网页有侧边栏的话，在网页主页打开侧边栏的情况下，canGoBack依然为false，这个时候单击后退键还是会退出APP。我用浏览器访问了一些类似的网站，发现都是同样的情况。于是我尝试让APP实现双击后退键才能退出。修改后的代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//先用一个long变量firstTime记录第一次点击返回键的时间</span></div><div class="line"><span class="keyword">private</span> <span class="keyword">long</span> firstTime = <span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onKeyDown</span><span class="params">(<span class="keyword">int</span> keyCode, KeyEvent event)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(keyCode == KeyEvent.KEYCODE_BACK &amp;&amp; event.getAction() == KeyEvent.ACTION_DOWN)&#123;</div><div class="line">            <span class="keyword">if</span>(web_blog.canGoBack())&#123;</div><div class="line">                web_blog.goBack();</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                <span class="comment">// 设置2000毫秒作为响应双击的延时</span></div><div class="line">                <span class="keyword">if</span> (System.currentTimeMillis()-firstTime&gt;<span class="number">2000</span>)&#123;</div><div class="line">                    <span class="comment">//来一个简单的Toast提示用户</span></div><div class="line">                    Toast.makeText(MainActivity.<span class="keyword">this</span>,<span class="string">"再按一次返回就退出了喔~"</span>,</div><div class="line">                                   Toast.LENGTH_SHORT).show();</div><div class="line">                    firstTime=System.currentTimeMillis();</div><div class="line">                &#125;<span class="keyword">else</span>&#123;</div><div class="line">                    finish();</div><div class="line">                    System.exit(<span class="number">0</span>);</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.onKeyDown(keyCode, event);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;修改后在Navigation手抖点击返回之后就是这个样子：<br><img src="https://raw.githubusercontent.com/wifi9984/wifi9984.github.io/master/img/android-app-blog-navigation.jpg" alt="修改后的Toast提示"></p>
+<p>&emsp;&emsp;哇，心情舒畅~就这样啦，弄好了~收工咯~（内测哈哈哈下载链接以后估计会直接贴在主页上吧~）</p>
 
       
 
@@ -247,28 +260,21 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">APP</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分享</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">WebView</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人博客</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android学习经验/" class="article-tag-list-link color2">Android学习经验</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -318,7 +324,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/31/android-pre/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/07/android-app-myblog/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -332,15 +338,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/08/01/android-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          【Andorid学习经验分享·1】刚入坑的时候那些令人窒息的操作
-        
-      </div>
-    </a>
   
+    <a href="/2017/08/22/android-4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
