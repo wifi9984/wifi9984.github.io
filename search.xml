@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[震惊！短短几行代码搞定个人博客APP]]></title>
+      <url>/2017/09/07/android-app-myblog/</url>
+      <content type="html"><![CDATA[<p>&emsp;&emsp;说出来你估计也信，我用不到1小时的时间搭出了一个个人博客的APP。</p>
+<p>&emsp;&emsp;再骚一点，全程的手打代码居然不超过<strong>50行</strong>！<br><a id="more"></a></p>
+<p>&emsp;&emsp;emmmm….好吧其实过程无比简单，只是利用了<strong>WebView</strong>控件。</p>
+<p>&emsp;&emsp;先给你们看看效果：</p>
+<p><img src="https://raw.githubusercontent.com/wifi9984/wifi9984.github.io/master/img/android-app-blog-main.jpg" alt="主界面"></p>
+<p>&emsp;&emsp;要实现上面的效果，其实非常简单。</p>
+<h2 id="1-创建Project"><a href="#1-创建Project" class="headerlink" title="1.创建Project"></a>1.创建Project</h2><p>&emsp;&emsp;打开功能健全的Android Studio，new一个project。导入模板的时候选择<em>empty activity</em>就可以了。</p>
+<h2 id="2-设置Style"><a href="#2-设置Style" class="headerlink" title="2.设置Style"></a>2.设置Style</h2><p>&emsp;&emsp;首先来到布局文件<em>activity_main.xml</em>，直接把根节点设置为WebView，宽高肯定都是match_parent了，如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">WebView</span></span></div><div class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/web_blog"</span></span></div><div class="line"><span class="tag">    <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></div><div class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></div><div class="line">&lt;/WebView&gt;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这样就在主界面整个窗体上放了一个WebView控件。但是我们回到设计视图，发现窗口还有Action Bar……这就需要用一些手段来去除这个东西了。</p>
+<p>&emsp;&emsp;打开<em>MainActivity.java</em>，我们要做的就是先把MainActivity声明里面的继承修改一下。默认是<em>AppCompatActivity</em>（默认带标题）修改为<em>Activity</em>。如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;...&#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;然后在onCreate()方法里面写上（先后关系不能乱哦）：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">requestWindowFeature(Window.FEATURE_NO_TITLE);</div><div class="line">setContentView(R.layout.activity_main);</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;这样调试一下就看到Action Bar已经消失了，WebView已经铺满了整个页面。但是，状态栏颜色还是不和谐。我的解决方法是在<em>colors.xml</em>里面把<em>colorPrimaryDark</em>修改为我的网页的顶部颜色。</p>
+<p>&emsp;&emsp;这样一来再去调试发现和谐了一些。那接下来去加载一下WebView</p>
+<h2 id="3-加载网页"><a href="#3-加载网页" class="headerlink" title="3.加载网页"></a>3.加载网页</h2><p>&emsp;&emsp;WebView的加载很简单，只需在onCreate()方法里添加几行代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//初始化控件</span></div><div class="line">web_blog = findViewById(R.id.web_blog);</div><div class="line"><span class="comment">//通过loadUrl()方法来设置需要加载的网页</span></div><div class="line">web_blog.loadUrl(<span class="string">"https://wifi9984.github.io"</span>);</div><div class="line"><span class="comment">//这个方法必须要写</span></div><div class="line">web_blog.setWebViewClient(<span class="keyword">new</span> WebViewClient());</div><div class="line"><span class="comment">//如果网页中包含JavaScript的话需要允许运行js</span></div><div class="line">WebSettings settings = web_blog.getSettings();</div><div class="line">settings.setJavaScriptEnabled(<span class="keyword">true</span>);</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;这样再去调试一遍呢？Ooooops！为什么无法加载？？？</p>
+<p>&emsp;&emsp;道理很简单…我们还需要在Manifest.xml里面添加联网权限许可……<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.INTERNET"</span>/&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>需要注意的是，uses-permission需要添加在application节点上面！</strong></p>
+<h2 id="4-其他小bug"><a href="#4-其他小bug" class="headerlink" title="4.其他小bug"></a>4.其他小bug</h2><p>&emsp;&emsp;首先，在滑动网页的时候我们会发现滑倒顶或者到底都会出现<strong>阴影动效</strong>。我个人感觉有点影响美观。很简单，在xml里面可以去掉。直接在WebView节点下设置<em>fadingEdge</em>和<em>overScrollMode</em>。完成后如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">WebView</span></span></div><div class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/web_blog"</span></span></div><div class="line"><span class="tag">    <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></div><div class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></div><div class="line"><span class="tag">    <span class="attr">android:fadingEdge</span>=<span class="string">"none"</span></span></div><div class="line"><span class="tag">    <span class="attr">android:overScrollMode</span>=<span class="string">"never"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">WebView</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;然后是用户体验的bug，就是<strong>默认情况下按返回键是直接退出APP回到系统界面的</strong>，我们同样需要修改这个操作。</p>
+<p>&emsp;&emsp;方法也比较简单，在<em>MainActivity.java</em>里，覆盖onKeyDown的方法。代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onKeyDown</span><span class="params">(<span class="keyword">int</span> keyCode, KeyEvent event)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(keyCode == KeyEvent.KEYCODE_BACK)&#123;</div><div class="line">            <span class="keyword">if</span>(web_blog.canGoBack())&#123;</div><div class="line">                web_blog.goBack();</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                System.exit(<span class="number">0</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.onKeyDown(keyCode, event);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;这样就可以了。<strong>但是，但是，但是！</strong>如果你的网页有<strong>侧边栏</strong>的话，在网页主页打开侧边栏的情况下，<strong>canGoBack依然为false</strong>，这个时候单击后退键还是会退出APP。我用浏览器访问了一些类似的网站，发现都是同样的情况。于是我尝试让APP实现<strong>双击后退键才能退出</strong>。修改后的代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//先用一个long变量firstTime记录第一次点击返回键的时间</span></div><div class="line"><span class="keyword">private</span> <span class="keyword">long</span> firstTime = <span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onKeyDown</span><span class="params">(<span class="keyword">int</span> keyCode, KeyEvent event)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(keyCode == KeyEvent.KEYCODE_BACK &amp;&amp; event.getAction() == KeyEvent.ACTION_DOWN)&#123;</div><div class="line">            <span class="keyword">if</span>(web_blog.canGoBack())&#123;</div><div class="line">                web_blog.goBack();</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                <span class="comment">// 设置2000毫秒作为响应双击的延时</span></div><div class="line">                <span class="keyword">if</span> (System.currentTimeMillis()-firstTime&gt;<span class="number">2000</span>)&#123;</div><div class="line">                    <span class="comment">//来一个简单的Toast提示用户</span></div><div class="line">                    Toast.makeText(MainActivity.<span class="keyword">this</span>,<span class="string">"再按一次返回就退出了喔~"</span>,</div><div class="line">                                   Toast.LENGTH_SHORT).show();</div><div class="line">                    firstTime=System.currentTimeMillis();</div><div class="line">                &#125;<span class="keyword">else</span>&#123;</div><div class="line">                    finish();</div><div class="line">                    System.exit(<span class="number">0</span>);</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.onKeyDown(keyCode, event);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;修改后在Navigation手抖点击返回之后就是这个样子：<br><img src="https://raw.githubusercontent.com/wifi9984/wifi9984.github.io/master/img/android-app-blog-navigation.jpg" alt="修改后的Toast提示"></p>
+<p>&emsp;&emsp;哇，心情舒畅~就这样啦，弄好了~收工咯~（内测哈哈哈下载链接以后估计会直接贴在主页上吧~）</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> Android </tag>
+            
+            <tag> APP </tag>
+            
+            <tag> WebView </tag>
+            
+            <tag> 个人博客 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局]]></title>
+      <url>/2017/08/22/android-4/</url>
+      <content type="html"><![CDATA[<p>&emsp;&emsp;8-22填坑。这十几天里，闭关了几天研究SQLite，又出去旅行了一周，所以拖更了QAQ</p>
+<p>&emsp;&emsp;刚开始接触Android开发的时候，如果高中有做过Visual Basic程序设计，就很容易理解所谓的面向对象编程（没有对象，下一个）。</p>
+<p>&emsp;&emsp;以高中教科书里的VB为例，VB工程的控件都在一个窗体（Form）里面，控件的实例化需要定义各种属性（比如name，caption，visible….），我们可以针对每个控件创建事件处理代码，比如command1_click。学过VB的同学可以好好回忆一下。<br><a id="more"></a></p>
+<p>&emsp;&emsp;在Android里面，工程就是你创建的package（app），窗体可以粗略理解为Activity，控件就是Button，TextView，ImageView……然后，VB里的事件代码，在Android里通过Java代码实现（Kotlin语言目前还没有广泛使用）</p>
+<p>——–分割线——–</p>
+<p>&emsp;&emsp;与VB不同的是，VB窗体可以通过自带网格参考线来定义布局，而Android应用为了适应不同尺寸以及分辨率的显示屏，需要用严谨的布局方式，也就是LinearLayout，RelativeLayout……通过设定布局形式来在不同屏幕上呈现相同的效果<em>（知识点：dp的概念）</em>。其中的原理就是：VB的窗体可以自由调整大小，大小以px（像素）计算。而手机上，APP默认就是铺满整个屏幕的。而手机屏幕也很复杂，不仅有4.7，5.0，5.5这样的尺寸，也有720P，1080P，2K这样的分辨率。</p>
+<p>&emsp;&emsp;假如用px作为单位，会出现好多问题。</p>
+<p>&emsp;&emsp;问题一：如果你开发的时候设计的是1080P的分辨率，那么这款APP在720P的显示屏上运行的时候，由于分辨率的限制，就无法显示完整的内容，如果在2K屏上运行，就会有一片空白区域。</p>
+<p>&emsp;&emsp;问题二：如果你开发的时候也用1080P，那么在5.5英寸1080P屏幕和5.0寸1080P屏幕上面，整个界面是被按比例缩放的，一个100*60px的按钮，在两个屏幕上的大小就不一样了。</p>
+<p>&emsp;&emsp;解决方法：引入dp的概念。dp=dip:<em>device independent pixels</em>(设备独立像素)，如果一个设备显示屏幕的像素密度为160ppi，那么1dp刚好对应1px。按照比例关系，像素密度越高的屏幕，1dp对应的像素点越多。这样有一个很直接的好处就是，创建一个100*60dp的按钮，放到不同ppi的屏幕下，显示出来的大小是几乎一样的（至于为什么是几乎，可以去了解一下知乎里面的一个问题<a href="https://www.zhihu.com/question/20697111" target="_blank" rel="external">传送门</a>）</p>
+<p>&emsp;&emsp;顺便解释一下上面提到的两个非常常用的基本布局：LinearLayout，RelativeLayout。LinearLayout翻译过来是<strong>线性布局</strong>，就是大致确定布局内部的控件排列方向为横向或者纵向。RelativeLayout翻译过来是<strong>相对布局</strong>，可以确定控件与布局四边的位置和与指定一个控件的相对位置。很多时候这些Layout都是内部<strong>嵌套</strong>着Layout的。用于呈现复杂的UI界面。</p>
+<p>&emsp;&emsp;理解上面几段文字后你大概就明白了为什么布局设计要如此严谨了。以后当你发现Android Studio模拟设备和你手上的真机显示效果不一样时，记得回到XML文件里面去分析一下自己的布局是否严谨。</p>
+<p>&emsp;&emsp;今天就先讲这么一小段吧。后续还会有针对控件的解读（涉及Java类的继承）和针对源码书写（涉及Java语法）的解读。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Android学习经验 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Android </tag>
+            
+            <tag> 学习 </tag>
+            
+            <tag> 分享 </tag>
+            
+            <tag> Android布局 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【Android崩溃经验分享·1】有句妈卖皮我一定要讲]]></title>
+      <url>/2017/08/07/android-bug-1/</url>
+      <content type="html"><![CDATA[<p>&emsp;&emsp;怒更！讲道理今天码代码码得有点爆炸，本来想给自己放个假的，但是转念一想记录一下崩溃经验也蛮有意思的。开始吧。</p>
+<a id="more"></a>
+<p>&emsp;&emsp;出于功能和审美需求，我在new这个project的时候就引用了Navigation Drawer Activity这个模板。emmm….一波设计之后的UI是这样的（这个是下午的版本，还能run的）</p>
+<p><img src="https://raw.githubusercontent.com/wifi9984/wifi9984.github.io/master/img/android-bug-1-1.jpg" alt="Navigation页面"><br><img src="https://raw.githubusercontent.com/wifi9984/wifi9984.github.io/master/img/android-bug-1-2.jpg" alt="Home页面"></p>
+<p>&emsp;&emsp;稍微讲解一下，Navigation Drawer就是侧滑出来的这个菜单，菜单里面的各项用于打开各个页面。可以是跳转到Activity，也可以是Fragment。</p>
+<p>&emsp;&emsp;刚创建的ND Activity的layout目录下包含了复杂的app_bar_main,content_main,activity_main……其中有着各种<em>include</em>关系（这个我刚开始理解了好一阵子，后来发现就是包含关系。仔细看XML文件里面都写了这么一行<em>include layout xxxx</em>）。一开始被这些东西弄得云里雾里，连上面的样式都是反反复复修改了n天才琢磨出来的。</p>
+<p>&emsp;&emsp;<strong>然后问题就来了！</strong></p>
+<p>&emsp;&emsp;我设计的结构：<em>activity_main include (app_bar_main + content_main)</em>。看似没什么问题，实际上我首页的各种<strong>事件响应和处理代码</strong>都写在了<strong>MainActivity</strong>里面。单一页面的时候当然发现不了问题啦。<br>&emsp;&emsp;then，我下午搞定了SQLite数据库的创建和写入，于是想顺便在Navigation Drawer里面做一个专门用来debug的Activity，思路当然是用<em>Intent</em>然后<em>startActivity(Intent)</em>。这一切下来简直不能再6，可是这时候我最没重视的<strong>ToolBar</strong>出来搞事情了。</p>
+<p>&emsp;&emsp;当我使用<strong>AppCompatActivity</strong>来实现这个<strong>debugActivity</strong>的时候，我发现主界面显示的ToolBar上面的Toogle不见了，然后我试着滑动拖出Navigation Drawer，但是我发现并不行！原因是，Navigation Drawer在MainActivity里面，而现在应用已经跳转到了另一个Activity，自然就无法继续使用Navigation Drawer了。怎么办呢？百度了以后我才知道原来正确的实现方式是用Fragment。<br>&emsp;&emsp;<em>稍作解释：Fragment就是一个片段，Activity则是一个完整的活动，Activity里面可以灵活引用Fragment。</em></p>
+<p>&emsp;&emsp;一开始我看Fragment是高级的东西，就没有想到用它，现在后悔了。于是，重新规划了APP的架构。</p>
+<p>&emsp;&emsp;新架构如下：Navigation Drawer作为页面切换的工具，默认展示在首页的是“所有事项”这个Fragment。然后页面的切换就调用<strong>Fragment的切换</strong>来实现。原理是这样的，这些Fragment的调用代码都写在MainActivity里面，MainActivity的Navigation Drawer作为导航，ToolBar的代码则是原封不动，只是添加了一些功能性的代码用于更改标题和变化ToolBar上的功能按钮。（这才是正确思路）</p>
+<p>&emsp;&emsp;然后我的工程就开始了，我需要把原本<em>content_main</em>的各种被include关系全都拆掉，然后在activity_main里面腾出空间，利用代码让Fragment展示出来。嗯…..说出来简单，但是做事情要考虑到历史的进程….这些工程目前耗费了我一个半小时…..对，目前….因为我还没有完成，这个APP目前还不能run…..妈卖皮……</p>
+<p>&emsp;&emsp;祝愿后人能少走些弯路。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Android错误集锦 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Android </tag>
+            
+            <tag> Bug </tag>
+            
+            <tag> 心态爆炸 </tag>
+            
+            <tag> Fragment </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【Android学习经验分享·3】对于Activity的解读]]></title>
+      <url>/2017/08/06/android-3/</url>
+      <content type="html"><![CDATA[<p>&emsp;&emsp;续。前几天是18周岁生日，偷懒了一阵子。今天继续填坑。<br>&emsp;&emsp;今天准备讲几个刚入门就会碰到但是概念又很深奥难懂的几个名词。</p>
+<h2 id="1、Activity"><a href="#1、Activity" class="headerlink" title="1、Activity"></a>1、Activity</h2><p>&emsp;&emsp;这单词我也知道啊是活动的意思，但是它在Android里面起到哪些作用呢？为什么会用Java语言来书写呢？Activity的生命周期有哪些用途呢？我们一一理解。<br><a id="more"></a></p>
+<p>&emsp;&emsp;首先，Activity在Android中的作用就是呈现一个屏幕给用户。通常情况下MainActivity呈现的是我们应用的主页。比如说，我们在主页上面放置一个按钮，点击按钮之后让应用跳转到指定的页面。这里就有两个Activity，一个是主页的MainActivity，另一个是跳转到的目标Activity。粗浅地理解的话，Activity相当于一个模块，多个Activity组合起来形成了一个具有完整功能的APP。从代码来分析，Activity的<em>onCreate</em>方法中必须要有一行：<em>setContentView(R.layout.xxx); </em>这行代码就是把这个Activity连接到我们做好的一个layout里面，从而展示这个layout。我们日常使用APP中碰到的多数页面跳转的场景，就是Activity之间的跳转。</p>
+<p>&emsp;&emsp;那么，为什么Activity会放在<em>src/java</em>目录下呢？我们学习的Java基础就是用来在Activity里面完善Activity的各种功能。其中涉及到Activity的继承、控件的继承……继承这个词是Java这一面向对象的编程语言的一大特征，Android的各种功能，都是基于Java来运行的。有Java基础的同学应该都知道Java可以定义很多个“类”，类可以被继承。从源代码来看，Activity继承自<strong>Context</strong>（这也是个很重要的点，以后要解释的），Context的父类是Object，Object是Java所有类的祖先。所以可以看到Activity本质上就是Java的一个类。所以用Java来书写。</p>
+<p>&emsp;&emsp;（拓展一下下）那么，<em>src/java</em>目录下全部都是Activity么？当然不是。类是可以创造的，我们可以写一个类，把不同Activity需要用到的功能函数写在这个类里面，再到Activity里面去调用这些函数，这样就减少了相同代码的重复书写。我们也可以public一个自定义控件，在自定义控件里面自由发挥，这样才能实现种种复杂的UI界面。</p>
+<p>&emsp;&emsp;那么，Activity的生命周期如何理解呢？生命周期的图表示起来很复杂，但是实际用到就很好理解了。还是一开始的例子，从MainActivity跳转到指定的Activity后，MainActivity暂时没有什么卵用了，如果再把它作为活动Activity的话，就白白占用系统资源了，所以会执行onStop()，或者也可以根据场景选用onPause()。你可能觉得反正现在硬件这么厉害，这样应该没什么吧。这显然是不可能的，如果不把东西搬到后台，开几个程序系统就吃不消了，所以系统有一个完整的管理机制，就是生命周期。<strong>严谨管理Activity的生命周期</strong>，其实有利于开发者对项目的层级的理解，这样出事情也知道应该往哪个方向去找Bug。</p>
+<p>&emsp;&emsp;在产品级的开发过程中，Activity要比我们上面说的复杂得多。在初学的时候，按照这样说的去理解Activity，可以更好的理解Android这一套庞大的体系。希望对同学们有所帮助。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Android学习经验 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Android </tag>
+            
+            <tag> 学习 </tag>
+            
+            <tag> 分享 </tag>
+            
+            <tag> Activity </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【Android学习经验分享·2】入坑到入土线路规划]]></title>
+      <url>/2017/08/02/android-2/</url>
+      <content type="html"><![CDATA[<p>&emsp;&emsp;续坑（刚开始产量比较高，以后可能就拖更了）。</p>
+<p>&emsp;&emsp;如果你是一个刚入坑Android（或者说刚入坑移动端开发）的fresher，<strong>规划好适合自己的学习路线能够节省不少的时间和精力</strong>。</p>
+<p>&emsp;&emsp;以我个人为例，我利用学业之余的时间零碎地学习一些结构性不强的知识，至于网上的课程，都是用较长的时间以章为单位去学习的。下面不妨把学习过程中需要接触到的知识点罗列一下（可能不完整）。</p>
+<a id="more"></a>
+<p>&emsp;&emsp;<strong>1、Java代码</strong>。学习Java语言就像我们在学校学习英语一样，需要持久的敲代码练习，需要把课程的小节联系起来学习。如果是0基础，Java是你接触的第一种高级语言的话，一星期固定安排几天去学习是不靠谱的，很容易学了新的忘了前面的。我个人建议，如果短期内你只打算把Java用在Android开发上，结合项目一边完善项目代码一边学习Java是比较高效的。这样学习的优势就是很容易上手Android。注意，可能仅仅是Android。因为Java的用途非常广泛，结合APP项目学习Java基本上不会涉及底层的操作，如果以后还要把Java用在其他领域的话，到时候还得再深入学习Java语言。在Android里，你可以按住ctrl键，单击一些类名函数名查看其源码，当你领悟了Java神奇的继承以及Android里面的各种继承关系，你就能在.java文件里面自由发挥了。</p>
+<p>&emsp;&emsp;<strong>2、Android Layout布局</strong>。Layout布局文件用来构建APP的外表，与web开发的前端有点类似。Layout文件的编写用到的是XML，XML是可拓展性标记语言，不仅仅是布局文件，Manifest清单文件也是用XML编写的。回到布局，学习布局的话，我建议刚开始先尝试自定义一些基础控件，比如Button，TextView，EditText，RadioButton，ImageView之类的，掌握控件属性的设置，记一记英文单词。然后对照开发者文档或者学习书上的介绍，从简单的LinearLayout，RelativeLayout，慢慢摸索Android布局的实现方法（gravity啊，margin啊，padding啊这些位置相关的东西）。刚开始也许会出现IDE里面呈现的画面和真机调试不符，可能写好XML跳到design看预览再跳回来发现多了absolute X/Y属性一脸懵逼。这些都是没有定义好控件与Layout（可以理解为控件的容器）的依赖关系所导致的，看看书对照一下实例代码和自己写的代码就懂了。至于自定义控件、高级控件、组合控件这些骚操作，初学的时候还是少碰的好，什么时候觉得简单控件玩熟透了，Java类的继承关系也理得差不多了，Layout文件也写得挺6了，再去尝试一下吧。例如v4,v7控件，能帮助你快速实现原生风格Material Design的设计。</p>
+<p>&emsp;&emsp;——分割线—–</p>
+<p>&emsp;&emsp;以下是零碎的知识点</p>
+<p>&emsp;&emsp;3、Manifest的各种操作</p>
+<p>&emsp;&emsp;4、drawable文件夹下.xml文件的奥秘：selector,shape…….</p>
+<p>&emsp;&emsp;5、string/dimens/color/style各种value的设置，减少布局修改值之后在控件属性里找一处改一处的情况</p>
+<p>&emsp;&emsp;6、APK打包，调试/签名发布，debug/release的各种事儿</p>
+<p>&emsp;&emsp;7、build.gradle(APP:xxx)的配置</p>
+<p>&emsp;&emsp;8、针对Android设备的UI设计</p>
+<p>&emsp;&emsp;9、Activity、Fragment的相关知识（很重要！）</p>
+<p>&emsp;&emsp;——分割线—–</p>
+<p>&emsp;&emsp;以下是进阶路线</p>
+<p>&emsp;&emsp;10、让APP接入网络（也涉及服务器端开发）</p>
+<p>&emsp;&emsp;11、学习使用一些API接口，比如支付宝，高德地图….</p>
+<p>&emsp;&emsp;12、像市场上的优质APP案例学习UI/UX设计</p>
+<p>&emsp;&emsp;13、学习使用调试工具，优化APP性能</p>
+<p>&emsp;&emsp;14、上架并开始APP的更新维护路程（入土成功）</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Android学习经验 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Android </tag>
+            
+            <tag> 学习 </tag>
+            
+            <tag> 分享 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【Andorid学习经验分享·1】刚入坑的时候那些令人窒息的操作]]></title>
+      <url>/2017/08/01/android-1/</url>
+      <content type="html"><![CDATA[<p>&emsp;&emsp;续坑。</p>
+<p>&emsp;&emsp;这篇讲一讲我自己还是一个刚下定决心入坑Android的小白的时候碰到的种种问题。</p>
+<a id="more"></a>
+<h4 id="搭建Java开发环境"><a href="#搭建Java开发环境" class="headerlink" title="搭建Java开发环境"></a>搭建Java开发环境</h4><p>&emsp;&emsp;一开始最头疼的问题就是<strong>开发环境</strong>的搭建了，第一步肯定是从<strong>JDK</strong>的安装开始，啊不，从下载开始。目前最新的JDK版本为1.8(是JDK不是JRE，JRE只是Java运行环境，JDK才是开发包)，在官网选择win x64的版本下载就可以了（32位的机子应该淘汰了）。下载安装后JDK是不能用的，因为需要配置<strong>环境变量</strong>。当时网上Andorid学习资源少之又少，连JDK如何配置都是在IDE报错之后才慢慢学会的。JDK安装最头疼的点就是环境变量的配置了，少打一个分号什么的都会报错。好在现在Windows 10配置环境变量只需增加条目即可，要检验JDK是否安装正确，不用按网上说的输命令测试，只要看看打开Android Studio时是否出现JDK错误就行了（好耿直的方法）。如果你玩过MC（我的世界），那么JDK环境变量配置应该不是个问题。</p>
+<h4 id="安装IDE-Android-Studio"><a href="#安装IDE-Android-Studio" class="headerlink" title="安装IDE(Android Studio)"></a>安装IDE(Android Studio)</h4><p>&emsp;&emsp;Android Studio的下载和安装都不是啥事儿（运行exe在安装目录\bin\studio64.exe）。但是首次打开就能碰上一堆麻烦。比如说，第一次运行，Android Studio会要求你设置<strong>代理（Proxy）</strong>来访问相关的资源链接（Google嘛，你懂的），我用的是ss代理所以配置<strong>代理地址127.0.0.1端口1080</strong>（即使用本机的代理）（考虑到现在ss不给搜。。。先留个方法在这里）然后是选择主题之类的一些个性化设置，英语功底可以的话就很轻松了。然后第一次运行就会下载SDK。主界面的各种操作也是很简单直观，自己体会就OK了。</p>
+<h4 id="Android-SDK"><a href="#Android-SDK" class="headerlink" title="Android SDK"></a>Android SDK</h4><p>&emsp;&emsp;然后还有一个问题就是SDK，SDK全称Software Development Kit（软件开发包），Android SDK通过<strong>SDK Manager</strong>来管理，同样也是<strong>需要代理</strong>的。没有科学上网工具的同学可以在SDK Manager-Tools-Options里面设置成国内的镜像站代理，并且启用HTTPS代理。Android SDK包含了各个版本的SDK以及各种Tools。首先必要的资源在第一次运行Android Studio的时候就会帮你下载好，一些可选的内容在这里讲一下：首先是你认为的开发时常用的Android版本对应的SDK，这个在新建项目的时候会让你选择一个最低运行版本，需要下载对应的SDK。在Android具体系统的SDK文件目录下，system_image为系统镜像，跑虚拟机用，可以不用下载。不管电脑配置咋样我还是<strong>建议用真机进行USB调试</strong>。system_image在AVD Manager里面配置好了就可以运行虚拟机，可以体验一下Android系统的新特性。在设定SDK安装地址的时候不允许包含空格（虽然Windows系统允许空格）。</p>
+<h4 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h4><p>&emsp;&emsp;然后是一个伴随你整个入坑过程的报错源头：Gradle。Gradle是Android的构建工具，用来编译、打包、构建……创建项目、调试项目、发布APK，都会用到Gradle。IDE会自带Gradle，但是不是完整包。建议去<strong>镜像站下载Gradle最新版的完整包</strong>附一个<a href="http://download.csdn.net/download/t6546545/9732412" target="_blank" rel="external">CSDN的Gradle 3.3完整包下载地址</a>解压到本地C:\Users\admin.gradle\wrapper\dists相应版本的文件夹下，在Android Studio的<strong>setting中启用offline work</strong>，避免无法使用代理造成的各种尴尬。比如，如果你的没有代理裸连Gradle，可能在构建新项目的时候一直卡在“Gradle:build”不动。另外，当你的代码有语法错误的时候Gradle会报错，也就是要调试的话必须保证全部代码没有被红色标记。切记，在打开项目之后，要等到进度条Gradle:build完成后再去写代码。</p>
+<p>&emsp;<br>&emsp;&emsp;——以上是我搭建开发环境时碰到的一些问题，如果你也碰到了或者需要提前防范，记得拿去参考。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Android学习经验 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Android </tag>
+            
+            <tag> 学习 </tag>
+            
+            <tag> 分享 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【前言】【Android学习经验分享】关于这系列笔记的一些事儿]]></title>
+      <url>/2017/07/31/android-pre/</url>
+      <content type="html"><![CDATA[<p>&emsp;&emsp;咳咳，笔记更新从今晚开始。这一系列笔记会不定时更新。 </p>
+<p>&emsp;&emsp;趁着高三长达3个半月的暑假，我决定在家搞些事情。我自己在自学Android应用程序开发，这篇笔记也算是边学边出教程吧。所以专业的知识点可能会比较粗糙。主要还是希望给<strong>真·真·真·零基础的fresher</strong>提供一些指导。不会出现大量代码，适合同学们用零碎的时间学习借鉴我的方法。希望能帮助到同学们~</p>
+<p>&emsp;&emsp;由于之前在高中空闲时间也零零碎碎地积累了一些关于Android应用开发的知识，所以我在开始学习时就为自己制定好了学习路线。</p>
+<p>&emsp;&emsp;<strong>不妨整理一下我高中积累的各种基础……</strong></p>
+<a id="more"></a>
+<h4 id="1、Java略胜于无的基础"><a href="#1、Java略胜于无的基础" class="headerlink" title="1、Java略胜于无的基础"></a>1、Java略胜于无的基础</h4><p>&emsp;&emsp;高中的我没有时间（其实就是懒）学习Java的各种概念，只是对基础语法有些了解。通俗的来讲就是看的懂代码在讲些什么但是不知道原理，所以让我自己写也只能依样画葫芦地去做。</p>
+<h4 id="2、Android-Studio的基本操作"><a href="#2、Android-Studio的基本操作" class="headerlink" title="2、Android Studio的基本操作"></a>2、Android Studio的基本操作</h4><p>&emsp;&emsp;Android Studio就是一个Android集成开发环境（简称IDE）啦。关于Android Studio的各种操作以及我的一些故事应该在后面会讲到吧。。。（先挖个坑）咳咳，这是个全英文的IDE，所以……对，要有一定英语水平。</p>
+<h4 id="3、Android-iOS（统称移动端）用户界面（UI）基础"><a href="#3、Android-iOS（统称移动端）用户界面（UI）基础" class="headerlink" title="3、Android/iOS（统称移动端）用户界面（UI）基础"></a>3、Android/iOS（统称移动端）用户界面（UI）基础</h4><p>&emsp;&emsp;没错，高中没怎么学习Java，倒是先去熟悉UI设计了。阅读了<a href="https://material.io/guidelines/material-design/introduction.html" target="_blank" rel="external">Material Design开发文档</a>以及苹果的<a href="https://developer.apple.com/design/" target="_blank" rel="external">iOS人机交互指南</a>（我看的是英文原版，不过貌似都有中文翻译过的版本）。这里要提一个事儿了，许多程序员代码写得6但是自己做的project的UI丑的不忍直视，我觉得是学习顺序的锅。尤其是做移动端的，Android/iOS两大饭碗的UI设计规范一定要熟悉（我不会说QQ微信微博其实都违背了Android设计原则的）。这块内容因为学的比较深入所以提的有点多……</p>
+<h4 id="4、Android-API-Guides-Google霸霸提供的开发者文档"><a href="#4、Android-API-Guides-Google霸霸提供的开发者文档" class="headerlink" title="4、Android API Guides(Google霸霸提供的开发者文档)"></a>4、Android API Guides(Google霸霸提供的开发者文档)</h4><p>&emsp;&emsp;由于没钱买Mac开发iOS，我也没怎么去看iOS的知识。<a href="https://developer.android.com" target="_blank" rel="external">developer.android.com</a>自己可以去看看。可以学习到不少Google这个Android系统开发者希望我们APP开发者去做的事情（这就是所谓的‘规范’吧）。</p>
+<h4 id="5、严格遵循大小写和空格！"><a href="#5、严格遵循大小写和空格！" class="headerlink" title="5、严格遵循大小写和空格！"></a>5、严格遵循大小写和空格！</h4><p>&emsp;&emsp;这是个很好的规范，从规范输入‘iPhone 7 Plus’开始。写代码的时候你会感谢这个强迫症的。</p>
+<h4 id="6、一定的盲打能力。"><a href="#6、一定的盲打能力。" class="headerlink" title="6、一定的盲打能力。"></a>6、一定的盲打能力。</h4><p>&emsp;&emsp;这个并不是必须的，只是打字效率高也算是一种生产力吧。</p>
+<p>&emsp; </p>
+<p>&emsp;&emsp;大概也就这些吧，看上去挺少的，但是零零碎碎的积累这些的效果似乎比一次性课程学习要来得有效。</p>
+<p>&emsp;&emsp;看到这里先别慌，这篇笔记是给<strong>真·真·真·零基础</strong>的同学写的。我的学习经验只是作为一个导向。（不过仔细一想我上面提到的一些东西是网上的教程没有的哦）</p>
+<p>&emsp;&emsp;嗯，今天晚上就这样起个头吧。现在我白天在学习，晚上睡前这几个小时用来写写笔记，对我自己而言也是知识的复习。行，给自己加个油，明天开始挖坑/填坑。</p>
+<p>&emsp;&emsp;——2017-7-31</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Android学习经验 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Android </tag>
+            
+            <tag> 学习 </tag>
+            
+            <tag> 分享 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>
