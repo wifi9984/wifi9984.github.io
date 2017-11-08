@@ -5,9 +5,9 @@
   <subtitle>Welcome！欢迎访问wifi的小站</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://wifi9984.site/"/>
   <updated>2017-09-07T14:34:54.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://wifi9984.site/</id>
   
   <author>
     <name>wifi9984</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>震惊！短短几行代码搞定个人博客APP</title>
-    <link href="http://yoursite.com/2017/09/07/android-app-myblog/"/>
-    <id>http://yoursite.com/2017/09/07/android-app-myblog/</id>
+    <link href="http://wifi9984.site/2017/09/07/android-app-myblog/"/>
+    <id>http://wifi9984.site/2017/09/07/android-app-myblog/</id>
     <published>2017-09-06T16:00:00.000Z</published>
     <updated>2017-09-07T14:34:54.000Z</updated>
     
@@ -33,20 +33,20 @@
     </summary>
     
     
-      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+      <category term="Android" scheme="http://wifi9984.site/tags/Android/"/>
     
-      <category term="APP" scheme="http://yoursite.com/tags/APP/"/>
+      <category term="APP" scheme="http://wifi9984.site/tags/APP/"/>
     
-      <category term="WebView" scheme="http://yoursite.com/tags/WebView/"/>
+      <category term="WebView" scheme="http://wifi9984.site/tags/WebView/"/>
     
-      <category term="个人博客" scheme="http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+      <category term="个人博客" scheme="http://wifi9984.site/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局</title>
-    <link href="http://yoursite.com/2017/08/22/android-4/"/>
-    <id>http://yoursite.com/2017/08/22/android-4/</id>
+    <link href="http://wifi9984.site/2017/08/22/android-4/"/>
+    <id>http://wifi9984.site/2017/08/22/android-4/</id>
     <published>2017-08-21T16:00:00.000Z</published>
     <updated>2017-09-05T13:52:46.000Z</updated>
     
@@ -60,23 +60,23 @@
     
     </summary>
     
-      <category term="Android学习经验" scheme="http://yoursite.com/categories/Android%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
+      <category term="Android学习经验" scheme="http://wifi9984.site/categories/Android%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
     
     
-      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+      <category term="Android" scheme="http://wifi9984.site/tags/Android/"/>
     
-      <category term="学习" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://wifi9984.site/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="分享" scheme="http://yoursite.com/tags/%E5%88%86%E4%BA%AB/"/>
+      <category term="分享" scheme="http://wifi9984.site/tags/%E5%88%86%E4%BA%AB/"/>
     
-      <category term="Android布局" scheme="http://yoursite.com/tags/Android%E5%B8%83%E5%B1%80/"/>
+      <category term="Android布局" scheme="http://wifi9984.site/tags/Android%E5%B8%83%E5%B1%80/"/>
     
   </entry>
   
   <entry>
     <title>【Android崩溃经验分享·1】有句妈卖皮我一定要讲</title>
-    <link href="http://yoursite.com/2017/08/07/android-bug-1/"/>
-    <id>http://yoursite.com/2017/08/07/android-bug-1/</id>
+    <link href="http://wifi9984.site/2017/08/07/android-bug-1/"/>
+    <id>http://wifi9984.site/2017/08/07/android-bug-1/</id>
     <published>2017-08-06T16:00:00.000Z</published>
     <updated>2017-09-07T14:21:50.000Z</updated>
     
@@ -88,23 +88,23 @@
     
     </summary>
     
-      <category term="Android错误集锦" scheme="http://yoursite.com/categories/Android%E9%94%99%E8%AF%AF%E9%9B%86%E9%94%A6/"/>
+      <category term="Android错误集锦" scheme="http://wifi9984.site/categories/Android%E9%94%99%E8%AF%AF%E9%9B%86%E9%94%A6/"/>
     
     
-      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+      <category term="Android" scheme="http://wifi9984.site/tags/Android/"/>
     
-      <category term="Bug" scheme="http://yoursite.com/tags/Bug/"/>
+      <category term="Bug" scheme="http://wifi9984.site/tags/Bug/"/>
     
-      <category term="心态爆炸" scheme="http://yoursite.com/tags/%E5%BF%83%E6%80%81%E7%88%86%E7%82%B8/"/>
+      <category term="心态爆炸" scheme="http://wifi9984.site/tags/%E5%BF%83%E6%80%81%E7%88%86%E7%82%B8/"/>
     
-      <category term="Fragment" scheme="http://yoursite.com/tags/Fragment/"/>
+      <category term="Fragment" scheme="http://wifi9984.site/tags/Fragment/"/>
     
   </entry>
   
   <entry>
     <title>【Android学习经验分享·3】对于Activity的解读</title>
-    <link href="http://yoursite.com/2017/08/06/android-3/"/>
-    <id>http://yoursite.com/2017/08/06/android-3/</id>
+    <link href="http://wifi9984.site/2017/08/06/android-3/"/>
+    <id>http://wifi9984.site/2017/08/06/android-3/</id>
     <published>2017-08-05T16:00:00.000Z</published>
     <updated>2017-09-05T13:40:38.000Z</updated>
     
@@ -117,23 +117,23 @@
     
     </summary>
     
-      <category term="Android学习经验" scheme="http://yoursite.com/categories/Android%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
+      <category term="Android学习经验" scheme="http://wifi9984.site/categories/Android%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
     
     
-      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+      <category term="Android" scheme="http://wifi9984.site/tags/Android/"/>
     
-      <category term="学习" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://wifi9984.site/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="分享" scheme="http://yoursite.com/tags/%E5%88%86%E4%BA%AB/"/>
+      <category term="分享" scheme="http://wifi9984.site/tags/%E5%88%86%E4%BA%AB/"/>
     
-      <category term="Activity" scheme="http://yoursite.com/tags/Activity/"/>
+      <category term="Activity" scheme="http://wifi9984.site/tags/Activity/"/>
     
   </entry>
   
   <entry>
     <title>【Android学习经验分享·2】入坑到入土线路规划</title>
-    <link href="http://yoursite.com/2017/08/02/android-2/"/>
-    <id>http://yoursite.com/2017/08/02/android-2/</id>
+    <link href="http://wifi9984.site/2017/08/02/android-2/"/>
+    <id>http://wifi9984.site/2017/08/02/android-2/</id>
     <published>2017-08-01T16:00:00.000Z</published>
     <updated>2017-09-05T13:24:50.000Z</updated>
     
@@ -147,21 +147,21 @@
     
     </summary>
     
-      <category term="Android学习经验" scheme="http://yoursite.com/categories/Android%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
+      <category term="Android学习经验" scheme="http://wifi9984.site/categories/Android%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
     
     
-      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+      <category term="Android" scheme="http://wifi9984.site/tags/Android/"/>
     
-      <category term="学习" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://wifi9984.site/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="分享" scheme="http://yoursite.com/tags/%E5%88%86%E4%BA%AB/"/>
+      <category term="分享" scheme="http://wifi9984.site/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
   <entry>
     <title>【Andorid学习经验分享·1】刚入坑的时候那些令人窒息的操作</title>
-    <link href="http://yoursite.com/2017/08/01/android-1/"/>
-    <id>http://yoursite.com/2017/08/01/android-1/</id>
+    <link href="http://wifi9984.site/2017/08/01/android-1/"/>
+    <id>http://wifi9984.site/2017/08/01/android-1/</id>
     <published>2017-07-31T16:00:00.000Z</published>
     <updated>2017-10-03T10:38:22.530Z</updated>
     
@@ -174,21 +174,21 @@
     
     </summary>
     
-      <category term="Android学习经验" scheme="http://yoursite.com/categories/Android%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
+      <category term="Android学习经验" scheme="http://wifi9984.site/categories/Android%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
     
     
-      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+      <category term="Android" scheme="http://wifi9984.site/tags/Android/"/>
     
-      <category term="学习" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://wifi9984.site/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="分享" scheme="http://yoursite.com/tags/%E5%88%86%E4%BA%AB/"/>
+      <category term="分享" scheme="http://wifi9984.site/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
   <entry>
     <title>【前言】【Android学习经验分享】关于这系列笔记的一些事儿</title>
-    <link href="http://yoursite.com/2017/07/31/android-pre/"/>
-    <id>http://yoursite.com/2017/07/31/android-pre/</id>
+    <link href="http://wifi9984.site/2017/07/31/android-pre/"/>
+    <id>http://wifi9984.site/2017/07/31/android-pre/</id>
     <published>2017-07-30T16:00:00.000Z</published>
     <updated>2017-09-05T13:17:18.000Z</updated>
     
@@ -203,14 +203,14 @@
     
     </summary>
     
-      <category term="Android学习经验" scheme="http://yoursite.com/categories/Android%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
+      <category term="Android学习经验" scheme="http://wifi9984.site/categories/Android%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
     
     
-      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+      <category term="Android" scheme="http://wifi9984.site/tags/Android/"/>
     
-      <category term="学习" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://wifi9984.site/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="分享" scheme="http://yoursite.com/tags/%E5%88%86%E4%BA%AB/"/>
+      <category term="分享" scheme="http://wifi9984.site/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   

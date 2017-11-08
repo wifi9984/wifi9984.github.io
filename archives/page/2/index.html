@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局 | WiFi9984的个人主页</title>
+  <title>Archives | WiFi9984的个人主页</title>
   <meta name="description" content="一只Android独立开发者的小站~" />
   <meta name="keywords" content="" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,18 +12,16 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="WiFi9984的个人主页">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;emsp;&amp;emsp;8-22填坑。这十几天里，闭关了几天研究SQLite，又出去旅行了一周，所以拖更了QAQ &amp;emsp;&amp;emsp;刚开始接触Android开发的时候，如果高中有做过Visual Basic程序设计，就很容易理解所谓的面向对象编程（没有对象，下一个）。 &amp;emsp;&amp;emsp;以高中教科书里的VB为例，VB工程的控件都在一个窗体（Form）里面，控件的实例化需要定义各种属性（">
-<meta name="keywords" content="Android,学习,分享,Android布局">
-<meta property="og:type" content="article">
-<meta property="og:title" content="【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局">
-<meta property="og:url" content="http://wifi9984.site/2017/08/22/android-4/index.html">
+  <meta name="description" content="一只Android独立开发者的小站~">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WiFi9984的个人主页">
+<meta property="og:url" content="http://wifi9984.site/archives/page/2/index.html">
 <meta property="og:site_name" content="WiFi9984的个人主页">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;8-22填坑。这十几天里，闭关了几天研究SQLite，又出去旅行了一周，所以拖更了QAQ &amp;emsp;&amp;emsp;刚开始接触Android开发的时候，如果高中有做过Visual Basic程序设计，就很容易理解所谓的面向对象编程（没有对象，下一个）。 &amp;emsp;&amp;emsp;以高中教科书里的VB为例，VB工程的控件都在一个窗体（Form）里面，控件的实例化需要定义各种属性（">
+<meta property="og:description" content="一只Android独立开发者的小站~">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-05T13:52:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;8-22填坑。这十几天里，闭关了几天研究SQLite，又出去旅行了一周，所以拖更了QAQ &amp;emsp;&amp;emsp;刚开始接触Android开发的时候，如果高中有做过Visual Basic程序设计，就很容易理解所谓的面向对象编程（没有对象，下一个）。 &amp;emsp;&amp;emsp;以高中教科书里的VB为例，VB工程的控件都在一个窗体（Form）里面，控件的实例化需要定义各种属性（">
+<meta name="twitter:title" content="WiFi9984的个人主页">
+<meta name="twitter:description" content="一只Android独立开发者的小站~">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -130,82 +128,87 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-android-4"
-  class="post white-box article-type-post"
-  itemscope itemprop="blogPost">
-	<section class='meta'>
-	<h2 class="title">
-  	<a href="/2017/08/22/android-4/">
-    	【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局
-    </a>
-  </h2>
-	<time>
-	  8月 22, 2017
-	</time>
-	
-    
-    <div class='cats'>
-        <a href="/categories/Android学习经验/">Android学习经验</a>
-    </div>
-
-	</section>
-	
-		<section class="toc-wrapper"></section>
-	
-	<section class="article typo">
-  	<div class="article-entry" itemprop="articleBody">
-    	<p>&emsp;&emsp;8-22填坑。这十几天里，闭关了几天研究SQLite，又出去旅行了一周，所以拖更了QAQ</p>
-<p>&emsp;&emsp;刚开始接触Android开发的时候，如果高中有做过Visual Basic程序设计，就很容易理解所谓的面向对象编程（没有对象，下一个）。</p>
-<p>&emsp;&emsp;以高中教科书里的VB为例，VB工程的控件都在一个窗体（Form）里面，控件的实例化需要定义各种属性（比如name，caption，visible….），我们可以针对每个控件创建事件处理代码，比如command1_click。学过VB的同学可以好好回忆一下。<br><a id="more"></a></p>
-<p>&emsp;&emsp;在Android里面，工程就是你创建的package（app），窗体可以粗略理解为Activity，控件就是Button，TextView，ImageView……然后，VB里的事件代码，在Android里通过Java代码实现（Kotlin语言目前还没有广泛使用）</p>
-<p>——–分割线——–</p>
-<p>&emsp;&emsp;与VB不同的是，VB窗体可以通过自带网格参考线来定义布局，而Android应用为了适应不同尺寸以及分辨率的显示屏，需要用严谨的布局方式，也就是LinearLayout，RelativeLayout……通过设定布局形式来在不同屏幕上呈现相同的效果<em>（知识点：dp的概念）</em>。其中的原理就是：VB的窗体可以自由调整大小，大小以px（像素）计算。而手机上，APP默认就是铺满整个屏幕的。而手机屏幕也很复杂，不仅有4.7，5.0，5.5这样的尺寸，也有720P，1080P，2K这样的分辨率。</p>
-<p>&emsp;&emsp;假如用px作为单位，会出现好多问题。</p>
-<p>&emsp;&emsp;问题一：如果你开发的时候设计的是1080P的分辨率，那么这款APP在720P的显示屏上运行的时候，由于分辨率的限制，就无法显示完整的内容，如果在2K屏上运行，就会有一片空白区域。</p>
-<p>&emsp;&emsp;问题二：如果你开发的时候也用1080P，那么在5.5英寸1080P屏幕和5.0寸1080P屏幕上面，整个界面是被按比例缩放的，一个100*60px的按钮，在两个屏幕上的大小就不一样了。</p>
-<p>&emsp;&emsp;解决方法：引入dp的概念。dp=dip:<em>device independent pixels</em>(设备独立像素)，如果一个设备显示屏幕的像素密度为160ppi，那么1dp刚好对应1px。按照比例关系，像素密度越高的屏幕，1dp对应的像素点越多。这样有一个很直接的好处就是，创建一个100*60dp的按钮，放到不同ppi的屏幕下，显示出来的大小是几乎一样的（至于为什么是几乎，可以去了解一下知乎里面的一个问题<a href="https://www.zhihu.com/question/20697111" target="_blank" rel="external">传送门</a>）</p>
-<p>&emsp;&emsp;顺便解释一下上面提到的两个非常常用的基本布局：LinearLayout，RelativeLayout。LinearLayout翻译过来是<strong>线性布局</strong>，就是大致确定布局内部的控件排列方向为横向或者纵向。RelativeLayout翻译过来是<strong>相对布局</strong>，可以确定控件与布局四边的位置和与指定一个控件的相对位置。很多时候这些Layout都是内部<strong>嵌套</strong>着Layout的。用于呈现复杂的UI界面。</p>
-<p>&emsp;&emsp;理解上面几段文字后你大概就明白了为什么布局设计要如此严谨了。以后当你发现Android Studio模拟设备和你手上的真机显示效果不一样时，记得回到XML文件里面去分析一下自己的布局是否严谨。</p>
-<p>&emsp;&emsp;今天就先讲这么一小段吧。后续还会有针对控件的解读（涉及Java类的继承）和针对源码书写（涉及Java语法）的解读。</p>
-
-  	</div>
-	  
-	  <div class="article-tags tags">
+        
+  <article id="archive-page" class="post article white-box">
+    <section class='meta'>
+      <h2 class="title">
+        <a href="javascript:void(0)">
+          Archives
+        </a>
+      </h2>
+    </section>
+    <section class="archive">
       
-        <a href="/tags/Android/">Android</a>
+            <div class="archive-item archive-year mark">
+              <a id="archive-year-2017" href='/archives/2017/' >
+                2017
+              </a>
+            </div>
       
-        <a href="/tags/学习/">学习</a>
+          <div class="archive-item archive-post mark">
+            <a href="/2017/09/07/android-app-myblog/">
+              <time>09-07</time>
+              <span class="title"><span>震惊！短短几行代码搞定个人博客APP</span></span>
+            </a>
+          </div>
       
-        <a href="/tags/分享/">分享</a>
+          <div class="archive-item archive-post mark">
+            <a href="/2017/08/22/android-4/">
+              <time>08-22</time>
+              <span class="title"><span>【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局</span></span>
+            </a>
+          </div>
       
-        <a href="/tags/Android布局/">Android布局</a>
+          <div class="archive-item archive-post mark">
+            <a href="/2017/08/07/android-bug-1/">
+              <time>08-07</time>
+              <span class="title"><span>【Android崩溃经验分享·1】有句妈卖皮我一定要讲</span></span>
+            </a>
+          </div>
       
-	  </div>
-    
-		
-	
-		<div class="art-item-footer">
-				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2017/09/07/android-app-myblog/" rel="prev"  title="震惊！短短几行代码搞定个人博客APP">
-						震惊！短短几行代码搞定个人博客APP 
-					</a></span>
-				
-				
-					<span class="art-item-right">next：<a href="/2017/08/07/android-bug-1/" rel="next"  title="【Android崩溃经验分享·1】有句妈卖皮我一定要讲">
-						【Android崩溃经验分享·1】有句妈卖皮我一定要讲
-					</a><i class="icon icon-chevron-thin-right"></i></span>
-				
-		</div>
-	
-	</section>
-	
-</article>
-<script>
-	window.subData = {
-		title: '【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局',
-		tools: true
-	}
-</script>
+          <div class="archive-item archive-post mark">
+            <a href="/2017/08/06/android-3/">
+              <time>08-06</time>
+              <span class="title"><span>【Android学习经验分享·3】对于Activity的解读</span></span>
+            </a>
+          </div>
+      
+          <div class="archive-item archive-post mark">
+            <a href="/2017/08/02/android-2/">
+              <time>08-02</time>
+              <span class="title"><span>【Android学习经验分享·2】入坑到入土线路规划</span></span>
+            </a>
+          </div>
+      
+          <div class="archive-item archive-post mark">
+            <a href="/2017/08/01/android-1/">
+              <time>08-01</time>
+              <span class="title"><span>【Andorid学习经验分享·1】刚入坑的时候那些令人窒息的操作</span></span>
+            </a>
+          </div>
+      
+          <div class="archive-item archive-post mark">
+            <a href="/2017/07/31/android-pre/">
+              <time>07-31</time>
+              <span class="title"><span>【前言】【Android学习经验分享】关于这系列笔记的一些事儿</span></span>
+            </a>
+          </div>
+      
+    </section>
+  </article>
+  <!--
+  
+    <nav id="page-nav">
+      
+      <a class="prev" rel="prev" href="/archives/">
+        <span class="icon icon-chevron-left"></span>
+        <span class="text">Previous</span>
+      </a>
+      
+      
+    </nav>
+  
+    -->
 
       </div>
       <aside class='l_side'>
