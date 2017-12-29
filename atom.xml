@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wifi9984.github.io/"/>
-  <updated>2017-09-07T14:34:54.000Z</updated>
+  <updated>2017-12-29T08:55:25.991Z</updated>
   <id>http://wifi9984.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【Android学习经验分享·5】如何优雅和单身程序员交流代码</title>
+    <link href="http://wifi9984.github.io/2017/12/29/android-5/"/>
+    <id>http://wifi9984.github.io/2017/12/29/android-5/</id>
+    <published>2017-12-29T08:55:25.964Z</published>
+    <updated>2017-12-29T08:55:25.991Z</updated>
+    
+    <content type="html"><![CDATA[<p>&emsp;&emsp;好像上一次更新博客是三个月…..emmmm快四个月前了。趁元旦放假写一篇<del>水帖</del>干货。顺便证明一波这个博客还没有凉。</p><p>&emsp;&emsp;这次讲讲Android Studio自带的SVN工具的GitHub的使用好了。GitHub是一个全球最大程序员<del>同性</del>交友网站…..emmm…..好吧，如果你新建了一个Project，有时候你可能需要和别人交流代码啥的….这时候有一个GitHub仓库就很方便了。</p><p>&emsp;&emsp;点击查看如何正确交♂友</p><a id="more"></a><p>&emsp;&emsp;emmmm….为什么这么久没有更新….首先是，真的也没有人看，好吧真的没人看，如果你看到了不妨扫一扫赞赏请我一杯奶茶…..</p><p>&emsp;&emsp;好吧真实的原因是….学业繁忙哈哈哈哈，告辞告辞。</p><p>&emsp;&emsp;不皮了，上正文。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;&amp;emsp;好像上一次更新博客是三个月…..emmmm快四个月前了。趁元旦放假写一篇&lt;del&gt;水帖&lt;/del&gt;干货。顺便证明一波这个博客还没有凉。&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;这次讲讲Android Studio自带的SVN工具的GitHub的使用好了。GitHub是一个全球最大程序员&lt;del&gt;同性&lt;/del&gt;交友网站…..emmm…..好吧，如果你新建了一个Project，有时候你可能需要和别人交流代码啥的….这时候有一个GitHub仓库就很方便了。&lt;/p&gt;
+&lt;p&gt;&amp;emsp;&amp;emsp;点击查看如何正确交♂友&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android学习经验" scheme="http://wifi9984.github.io/categories/Android%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="Android" scheme="http://wifi9984.github.io/tags/Android/"/>
+    
+      <category term="学习" scheme="http://wifi9984.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="分享" scheme="http://wifi9984.github.io/tags/%E5%88%86%E4%BA%AB/"/>
+    
+      <category term="Git" scheme="http://wifi9984.github.io/tags/Git/"/>
+    
+      <category term="GitHub" scheme="http://wifi9984.github.io/tags/GitHub/"/>
+    
+  </entry>
   
   <entry>
     <title>震惊！短短几行代码搞定个人博客APP</title>
