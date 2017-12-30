@@ -34,7 +34,7 @@
 <p>&emsp;&emsp;GitHub的功能还有很多啦，反正是全英文的，注册一个账号去里面探索一下也不错啊~<br><span id="jump"></span></p>
 <h4 id="3"> Android Studio的项目怎么管理？</h4>
 
-&lt;h5 id=”3.1“&gt;添加项目到GitHub
+<h5 id="3.1">添加项目到GitHub</h5>
 
 <p>&emsp;&emsp;不慌，首先在你的电脑上安装Git<a href="https://git-scm.com/downloads" target="_blank" rel="external">下载Git</a>。</p>
 <p>&emsp;&emsp;打开建好的Project，在AS工具栏找到<em>VCS -&gt; Import into Version Control -&gt; Share Project on GitHub</em><br><img src="https://github.com/wifi9984/wifi9984.github.io/blob/master/img/share_project_1.png?raw=true" alt="Share Project - 1"><br>&emsp;&emsp;这时候需要登录GitHub。然后为仓库命名以及添加说明。<br><img src="https://github.com/wifi9984/wifi9984.github.io/blob/master/img/share_project_2.png?raw=true" alt="Share Project - 2"><br>&emsp;&emsp;点击”<em>Share</em>“，等待进度条走完，打开GitHub主页，就可以看到传上去的仓库了。<br><img src="https://github.com/wifi9984/wifi9984.github.io/blob/master/img/share_project_3.png?raw=true" alt="Share Project - 3"></p>
