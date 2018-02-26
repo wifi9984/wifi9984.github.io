@@ -3,11 +3,11 @@
   <title>WiFi9984的个人主页</title>
   
   <subtitle>一只Android独立开发者的小站~</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/wifi9984.github.io/atom.xml" rel="self"/>
   
-  <link href="https://wifi9984.github.io/"/>
+  <link href="https://wifi9984.github.io/blog/"/>
   <updated>2018-02-26T06:07:27.801Z</updated>
-  <id>https://wifi9984.github.io/</id>
+  <id>https://wifi9984.github.io/blog/</id>
   
   <author>
     <name>Wi-Fi信号覆盖</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>【Android学习经验分享·5】如何优雅和其他单身程序员交流代码</title>
-    <link href="https://wifi9984.github.io/2017/12/29/android-git/"/>
-    <id>https://wifi9984.github.io/2017/12/29/android-git/</id>
+    <link href="https://wifi9984.github.io/blog/2017/12/29/android-git/"/>
+    <id>https://wifi9984.github.io/blog/2017/12/29/android-git/</id>
     <published>2017-12-29T00:00:00.000Z</published>
     <updated>2018-02-26T06:07:27.801Z</updated>
     
@@ -33,25 +33,25 @@
     
     </summary>
     
-      <category term="Git" scheme="https://wifi9984.github.io/categories/Git/"/>
+      <category term="Git" scheme="https://wifi9984.github.io/blog/categories/Git/"/>
     
     
-      <category term="Android" scheme="https://wifi9984.github.io/tags/Android/"/>
+      <category term="Android" scheme="https://wifi9984.github.io/blog/tags/Android/"/>
     
-      <category term="学习" scheme="https://wifi9984.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="https://wifi9984.github.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="分享" scheme="https://wifi9984.github.io/tags/%E5%88%86%E4%BA%AB/"/>
+      <category term="分享" scheme="https://wifi9984.github.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
     
-      <category term="Git" scheme="https://wifi9984.github.io/tags/Git/"/>
+      <category term="Git" scheme="https://wifi9984.github.io/blog/tags/Git/"/>
     
-      <category term="GitHub" scheme="https://wifi9984.github.io/tags/GitHub/"/>
+      <category term="GitHub" scheme="https://wifi9984.github.io/blog/tags/GitHub/"/>
     
   </entry>
   
   <entry>
     <title>震惊！短短几行代码搞定个人博客APP</title>
-    <link href="https://wifi9984.github.io/2017/09/07/android-app-myblog/"/>
-    <id>https://wifi9984.github.io/2017/09/07/android-app-myblog/</id>
+    <link href="https://wifi9984.github.io/blog/2017/09/07/android-app-myblog/"/>
+    <id>https://wifi9984.github.io/blog/2017/09/07/android-app-myblog/</id>
     <published>2017-09-07T00:00:00.000Z</published>
     <updated>2018-02-26T06:08:30.468Z</updated>
     
@@ -64,23 +64,23 @@
     
     </summary>
     
-      <category term="Android" scheme="https://wifi9984.github.io/categories/Android/"/>
+      <category term="Android" scheme="https://wifi9984.github.io/blog/categories/Android/"/>
     
     
-      <category term="Android" scheme="https://wifi9984.github.io/tags/Android/"/>
+      <category term="Android" scheme="https://wifi9984.github.io/blog/tags/Android/"/>
     
-      <category term="APP" scheme="https://wifi9984.github.io/tags/APP/"/>
+      <category term="APP" scheme="https://wifi9984.github.io/blog/tags/APP/"/>
     
-      <category term="WebView" scheme="https://wifi9984.github.io/tags/WebView/"/>
+      <category term="WebView" scheme="https://wifi9984.github.io/blog/tags/WebView/"/>
     
-      <category term="个人博客" scheme="https://wifi9984.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+      <category term="个人博客" scheme="https://wifi9984.github.io/blog/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局</title>
-    <link href="https://wifi9984.github.io/2017/08/22/android-layout/"/>
-    <id>https://wifi9984.github.io/2017/08/22/android-layout/</id>
+    <link href="https://wifi9984.github.io/blog/2017/08/22/android-layout/"/>
+    <id>https://wifi9984.github.io/blog/2017/08/22/android-layout/</id>
     <published>2017-08-22T00:00:00.000Z</published>
     <updated>2018-02-26T06:08:42.218Z</updated>
     
@@ -93,23 +93,23 @@
     
     </summary>
     
-      <category term="Android" scheme="https://wifi9984.github.io/categories/Android/"/>
+      <category term="Android" scheme="https://wifi9984.github.io/blog/categories/Android/"/>
     
     
-      <category term="Android" scheme="https://wifi9984.github.io/tags/Android/"/>
+      <category term="Android" scheme="https://wifi9984.github.io/blog/tags/Android/"/>
     
-      <category term="学习" scheme="https://wifi9984.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="https://wifi9984.github.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="分享" scheme="https://wifi9984.github.io/tags/%E5%88%86%E4%BA%AB/"/>
+      <category term="分享" scheme="https://wifi9984.github.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
     
-      <category term="Android布局" scheme="https://wifi9984.github.io/tags/Android%E5%B8%83%E5%B1%80/"/>
+      <category term="Android布局" scheme="https://wifi9984.github.io/blog/tags/Android%E5%B8%83%E5%B1%80/"/>
     
   </entry>
   
   <entry>
     <title>【Android崩溃经验分享·1】有句妈卖皮我一定要讲</title>
-    <link href="https://wifi9984.github.io/2017/08/07/android-bug-fragment/"/>
-    <id>https://wifi9984.github.io/2017/08/07/android-bug-fragment/</id>
+    <link href="https://wifi9984.github.io/blog/2017/08/07/android-bug-fragment/"/>
+    <id>https://wifi9984.github.io/blog/2017/08/07/android-bug-fragment/</id>
     <published>2017-08-07T00:00:00.000Z</published>
     <updated>2018-02-26T06:08:38.908Z</updated>
     
@@ -121,23 +121,23 @@
     
     </summary>
     
-      <category term="Android" scheme="https://wifi9984.github.io/categories/Android/"/>
+      <category term="Android" scheme="https://wifi9984.github.io/blog/categories/Android/"/>
     
     
-      <category term="Android" scheme="https://wifi9984.github.io/tags/Android/"/>
+      <category term="Android" scheme="https://wifi9984.github.io/blog/tags/Android/"/>
     
-      <category term="Bug" scheme="https://wifi9984.github.io/tags/Bug/"/>
+      <category term="Bug" scheme="https://wifi9984.github.io/blog/tags/Bug/"/>
     
-      <category term="心态爆炸" scheme="https://wifi9984.github.io/tags/%E5%BF%83%E6%80%81%E7%88%86%E7%82%B8/"/>
+      <category term="心态爆炸" scheme="https://wifi9984.github.io/blog/tags/%E5%BF%83%E6%80%81%E7%88%86%E7%82%B8/"/>
     
-      <category term="Fragment" scheme="https://wifi9984.github.io/tags/Fragment/"/>
+      <category term="Fragment" scheme="https://wifi9984.github.io/blog/tags/Fragment/"/>
     
   </entry>
   
   <entry>
     <title>【Android学习经验分享·3】对于Activity的解读</title>
-    <link href="https://wifi9984.github.io/2017/08/06/android-activity/"/>
-    <id>https://wifi9984.github.io/2017/08/06/android-activity/</id>
+    <link href="https://wifi9984.github.io/blog/2017/08/06/android-activity/"/>
+    <id>https://wifi9984.github.io/blog/2017/08/06/android-activity/</id>
     <published>2017-08-06T00:00:00.000Z</published>
     <updated>2018-02-26T06:07:49.952Z</updated>
     
@@ -149,23 +149,23 @@
     
     </summary>
     
-      <category term="Android" scheme="https://wifi9984.github.io/categories/Android/"/>
+      <category term="Android" scheme="https://wifi9984.github.io/blog/categories/Android/"/>
     
     
-      <category term="Android" scheme="https://wifi9984.github.io/tags/Android/"/>
+      <category term="Android" scheme="https://wifi9984.github.io/blog/tags/Android/"/>
     
-      <category term="学习" scheme="https://wifi9984.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="https://wifi9984.github.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="分享" scheme="https://wifi9984.github.io/tags/%E5%88%86%E4%BA%AB/"/>
+      <category term="分享" scheme="https://wifi9984.github.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
     
-      <category term="Activity" scheme="https://wifi9984.github.io/tags/Activity/"/>
+      <category term="Activity" scheme="https://wifi9984.github.io/blog/tags/Activity/"/>
     
   </entry>
   
   <entry>
     <title>【Android学习经验分享·2】入坑到入土线路规划</title>
-    <link href="https://wifi9984.github.io/2017/08/02/android-learing-route/"/>
-    <id>https://wifi9984.github.io/2017/08/02/android-learing-route/</id>
+    <link href="https://wifi9984.github.io/blog/2017/08/02/android-learing-route/"/>
+    <id>https://wifi9984.github.io/blog/2017/08/02/android-learing-route/</id>
     <published>2017-08-02T00:00:00.000Z</published>
     <updated>2018-02-26T06:08:45.729Z</updated>
     
@@ -179,21 +179,21 @@
     
     </summary>
     
-      <category term="Android" scheme="https://wifi9984.github.io/categories/Android/"/>
+      <category term="Android" scheme="https://wifi9984.github.io/blog/categories/Android/"/>
     
     
-      <category term="Android" scheme="https://wifi9984.github.io/tags/Android/"/>
+      <category term="Android" scheme="https://wifi9984.github.io/blog/tags/Android/"/>
     
-      <category term="学习" scheme="https://wifi9984.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="https://wifi9984.github.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="分享" scheme="https://wifi9984.github.io/tags/%E5%88%86%E4%BA%AB/"/>
+      <category term="分享" scheme="https://wifi9984.github.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
   <entry>
     <title>【Andorid学习经验分享·1】刚入坑的时候那些令人窒息的操作</title>
-    <link href="https://wifi9984.github.io/2017/08/01/android-start/"/>
-    <id>https://wifi9984.github.io/2017/08/01/android-start/</id>
+    <link href="https://wifi9984.github.io/blog/2017/08/01/android-start/"/>
+    <id>https://wifi9984.github.io/blog/2017/08/01/android-start/</id>
     <published>2017-08-01T00:00:00.000Z</published>
     <updated>2018-02-26T06:08:57.900Z</updated>
     
@@ -206,21 +206,21 @@
     
     </summary>
     
-      <category term="Android" scheme="https://wifi9984.github.io/categories/Android/"/>
+      <category term="Android" scheme="https://wifi9984.github.io/blog/categories/Android/"/>
     
     
-      <category term="Android" scheme="https://wifi9984.github.io/tags/Android/"/>
+      <category term="Android" scheme="https://wifi9984.github.io/blog/tags/Android/"/>
     
-      <category term="学习" scheme="https://wifi9984.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="https://wifi9984.github.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="分享" scheme="https://wifi9984.github.io/tags/%E5%88%86%E4%BA%AB/"/>
+      <category term="分享" scheme="https://wifi9984.github.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
   <entry>
     <title>【前言】【Android学习经验分享】关于这系列笔记的一些事儿</title>
-    <link href="https://wifi9984.github.io/2017/07/31/android-pre/"/>
-    <id>https://wifi9984.github.io/2017/07/31/android-pre/</id>
+    <link href="https://wifi9984.github.io/blog/2017/07/31/android-pre/"/>
+    <id>https://wifi9984.github.io/blog/2017/07/31/android-pre/</id>
     <published>2017-07-31T00:00:00.000Z</published>
     <updated>2018-02-26T06:08:51.654Z</updated>
     
@@ -233,14 +233,14 @@
     
     </summary>
     
-      <category term="Android" scheme="https://wifi9984.github.io/categories/Android/"/>
+      <category term="Android" scheme="https://wifi9984.github.io/blog/categories/Android/"/>
     
     
-      <category term="Android" scheme="https://wifi9984.github.io/tags/Android/"/>
+      <category term="Android" scheme="https://wifi9984.github.io/blog/tags/Android/"/>
     
-      <category term="学习" scheme="https://wifi9984.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="https://wifi9984.github.io/blog/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="分享" scheme="https://wifi9984.github.io/tags/%E5%88%86%E4%BA%AB/"/>
+      <category term="分享" scheme="https://wifi9984.github.io/blog/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
