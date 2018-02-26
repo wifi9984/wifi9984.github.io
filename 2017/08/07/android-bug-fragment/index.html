@@ -5,21 +5,24 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://wifi9984.github.io">
-  <title>【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局 | WiFi9984的个人主页</title>
+  <link rel="dns-prefetch" href="https://wifi9984.github.io">
+  <title>【Android崩溃经验分享·1】有句妈卖皮我一定要讲 | WiFi9984的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;emsp;&amp;emsp;8-22填坑。这十几天里，闭关了几天研究SQLite，又出去旅行了一周，所以拖更了QAQ &amp;emsp;&amp;emsp;刚开始接触Android开发的时候，如果高中有做过Visual Basic程序设计，就很容易理解所谓的面向对象编程（没有对象，下一个）。 &amp;emsp;&amp;emsp;以高中教科书里的VB为例，VB工程的控件都在一个窗体（Form）里面，控件的实例化需要定义各种属性（">
-<meta name="keywords" content="Android,学习,分享,Android布局">
+  <meta name="description" content="&amp;emsp;&amp;emsp;怒更！讲道理今天码代码码得有点爆炸，本来想给自己放个假的，但是转念一想记录一下崩溃经验也蛮有意思的。开始吧。">
+<meta name="keywords" content="Android,Bug,心态爆炸,Fragment">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局">
-<meta property="og:url" content="http://wifi9984.github.io/2017/08/22/android-4/index.html">
+<meta property="og:title" content="【Android崩溃经验分享·1】有句妈卖皮我一定要讲">
+<meta property="og:url" content="https://wifi9984.github.io/2017/08/07/android-bug-fragment/index.html">
 <meta property="og:site_name" content="WiFi9984的个人主页">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;8-22填坑。这十几天里，闭关了几天研究SQLite，又出去旅行了一周，所以拖更了QAQ &amp;emsp;&amp;emsp;刚开始接触Android开发的时候，如果高中有做过Visual Basic程序设计，就很容易理解所谓的面向对象编程（没有对象，下一个）。 &amp;emsp;&amp;emsp;以高中教科书里的VB为例，VB工程的控件都在一个窗体（Form）里面，控件的实例化需要定义各种属性（">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;怒更！讲道理今天码代码码得有点爆炸，本来想给自己放个假的，但是转念一想记录一下崩溃经验也蛮有意思的。开始吧。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-05T13:52:46.000Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/wifi9984/wifi9984.github.io/master/img/android-bug-1-1.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/wifi9984/wifi9984.github.io/master/img/android-bug-1-2.jpg">
+<meta property="og:updated_time" content="2018-02-26T06:08:38.908Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;8-22填坑。这十几天里，闭关了几天研究SQLite，又出去旅行了一周，所以拖更了QAQ &amp;emsp;&amp;emsp;刚开始接触Android开发的时候，如果高中有做过Visual Basic程序设计，就很容易理解所谓的面向对象编程（没有对象，下一个）。 &amp;emsp;&amp;emsp;以高中教科书里的VB为例，VB工程的控件都在一个窗体（Form）里面，控件的实例化需要定义各种属性（">
+<meta name="twitter:title" content="【Android崩溃经验分享·1】有句妈卖皮我一定要讲">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;怒更！讲道理今天码代码码得有点爆炸，本来想给自己放个假的，但是转念一想记录一下崩溃经验也蛮有意思的。开始吧。">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/wifi9984/wifi9984.github.io/master/img/android-bug-1-1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="WiFi9984的个人主页" type="application/atom+xml">
   
@@ -51,10 +54,10 @@
 			<img src="https://avatars0.githubusercontent.com/u/16449763?v=4&amp;s=460" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">wifi9984</a></h1>
+		  <h1 class="header-author"><a href="/">Wi-Fi信号覆盖</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">Welcome！欢迎访问wifi的小站</p>
+		<p class="header-subtitle">一只Android独立开发者的小站~</p>
 		
 
 		<nav class="header-menu">
@@ -111,10 +114,10 @@
 				<img src="https://avatars0.githubusercontent.com/u/16449763?v=4&amp;s=460" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">wifi9984</h1>
+			  <h1 class="header-author js-header-author">Wi-Fi信号覆盖</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>Welcome！欢迎访问wifi的小站<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>一只Android独立开发者的小站~<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -157,39 +160,39 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-android-4" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-android-bug-fragment" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局
+      【Android崩溃经验分享·1】有句妈卖皮我一定要讲
     </h1>
   
 
         
-        <a href="/2017/08/22/android-4/" class="archive-article-date">
-  	<time datetime="2017-08-21T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-22</time>
+        <a href="/2017/08/07/android-bug-fragment/" class="archive-article-date">
+  	<time datetime="2017-08-07T00:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&emsp;&emsp;8-22填坑。这十几天里，闭关了几天研究SQLite，又出去旅行了一周，所以拖更了QAQ</p>
-<p>&emsp;&emsp;刚开始接触Android开发的时候，如果高中有做过Visual Basic程序设计，就很容易理解所谓的面向对象编程（没有对象，下一个）。</p>
-<p>&emsp;&emsp;以高中教科书里的VB为例，VB工程的控件都在一个窗体（Form）里面，控件的实例化需要定义各种属性（比如name，caption，visible….），我们可以针对每个控件创建事件处理代码，比如command1_click。学过VB的同学可以好好回忆一下。<br><a id="more"></a></p>
-<p>&emsp;&emsp;在Android里面，工程就是你创建的package（app），窗体可以粗略理解为Activity，控件就是Button，TextView，ImageView……然后，VB里的事件代码，在Android里通过Java代码实现（Kotlin语言目前还没有广泛使用）</p>
-<p>——–分割线——–</p>
-<p>&emsp;&emsp;与VB不同的是，VB窗体可以通过自带网格参考线来定义布局，而Android应用为了适应不同尺寸以及分辨率的显示屏，需要用严谨的布局方式，也就是LinearLayout，RelativeLayout……通过设定布局形式来在不同屏幕上呈现相同的效果<em>（知识点：dp的概念）</em>。其中的原理就是：VB的窗体可以自由调整大小，大小以px（像素）计算。而手机上，APP默认就是铺满整个屏幕的。而手机屏幕也很复杂，不仅有4.7，5.0，5.5这样的尺寸，也有720P，1080P，2K这样的分辨率。</p>
-<p>&emsp;&emsp;假如用px作为单位，会出现好多问题。</p>
-<p>&emsp;&emsp;问题一：如果你开发的时候设计的是1080P的分辨率，那么这款APP在720P的显示屏上运行的时候，由于分辨率的限制，就无法显示完整的内容，如果在2K屏上运行，就会有一片空白区域。</p>
-<p>&emsp;&emsp;问题二：如果你开发的时候也用1080P，那么在5.5英寸1080P屏幕和5.0寸1080P屏幕上面，整个界面是被按比例缩放的，一个100*60px的按钮，在两个屏幕上的大小就不一样了。</p>
-<p>&emsp;&emsp;解决方法：引入dp的概念。dp=dip:<em>device independent pixels</em>(设备独立像素)，如果一个设备显示屏幕的像素密度为160ppi，那么1dp刚好对应1px。按照比例关系，像素密度越高的屏幕，1dp对应的像素点越多。这样有一个很直接的好处就是，创建一个100*60dp的按钮，放到不同ppi的屏幕下，显示出来的大小是几乎一样的（至于为什么是几乎，可以去了解一下知乎里面的一个问题<a href="https://www.zhihu.com/question/20697111" target="_blank" rel="external">传送门</a>）</p>
-<p>&emsp;&emsp;顺便解释一下上面提到的两个非常常用的基本布局：LinearLayout，RelativeLayout。LinearLayout翻译过来是<strong>线性布局</strong>，就是大致确定布局内部的控件排列方向为横向或者纵向。RelativeLayout翻译过来是<strong>相对布局</strong>，可以确定控件与布局四边的位置和与指定一个控件的相对位置。很多时候这些Layout都是内部<strong>嵌套</strong>着Layout的。用于呈现复杂的UI界面。</p>
-<p>&emsp;&emsp;理解上面几段文字后你大概就明白了为什么布局设计要如此严谨了。以后当你发现Android Studio模拟设备和你手上的真机显示效果不一样时，记得回到XML文件里面去分析一下自己的布局是否严谨。</p>
-<p>&emsp;&emsp;今天就先讲这么一小段吧。后续还会有针对控件的解读（涉及Java类的继承）和针对源码书写（涉及Java语法）的解读。</p>
+        <p>&emsp;&emsp;怒更！讲道理今天码代码码得有点爆炸，本来想给自己放个假的，但是转念一想记录一下崩溃经验也蛮有意思的。开始吧。</p>
+<a id="more"></a>
+<p>&emsp;&emsp;出于功能和审美需求，我在new这个project的时候就引用了Navigation Drawer Activity这个模板。emmm….一波设计之后的UI是这样的（这个是下午的版本，还能run的）</p>
+<p><img src="https://raw.githubusercontent.com/wifi9984/wifi9984.github.io/master/img/android-bug-1-1.jpg" alt="Navigation页面"><br><img src="https://raw.githubusercontent.com/wifi9984/wifi9984.github.io/master/img/android-bug-1-2.jpg" alt="Home页面"></p>
+<p>&emsp;&emsp;稍微讲解一下，Navigation Drawer就是侧滑出来的这个菜单，菜单里面的各项用于打开各个页面。可以是跳转到Activity，也可以是Fragment。</p>
+<p>&emsp;&emsp;刚创建的ND Activity的layout目录下包含了复杂的app_bar_main,content_main,activity_main……其中有着各种<code>include</code>关系（这个我刚开始理解了好一阵子，后来发现就是包含关系。仔细看XML文件里面都写了这么一行<code>include layout xxxx</code>）。一开始被这些东西弄得云里雾里，连上面的样式都是反反复复修改了n天才琢磨出来的。</p>
+<p>&emsp;&emsp;<strong>然后问题就来了！</strong></p>
+<p>&emsp;&emsp;我设计的结构：<code>activity_main include</code> (<code>app_bar_main</code> + <code>content_main</code>)。看似没什么问题，实际上我首页的各种<strong>事件响应和处理代码</strong>都写在了<strong>MainActivity</strong>里面。单一页面的时候当然发现不了问题啦。<br>&emsp;&emsp;then，我下午搞定了SQLite数据库的创建和写入，于是想顺便在Navigation Drawer里面做一个专门用来debug的Activity，思路当然是用<code>Intent</code>然后<code>startActivity(Intent)</code>。这一切下来简直不能再6，可是这时候我最没重视的<strong>ToolBar</strong>出来搞事情了。</p>
+<p>&emsp;&emsp;当我使用<strong>AppCompatActivity</strong>来实现这个<strong>debugActivity</strong>的时候，我发现主界面显示的ToolBar上面的Toogle不见了，然后我试着滑动拖出Navigation Drawer，但是我发现并不行！原因是，Navigation Drawer在MainActivity里面，而现在应用已经跳转到了另一个Activity，自然就无法继续使用Navigation Drawer了。怎么办呢？百度了以后我才知道原来正确的实现方式是用Fragment。<br><br>&emsp;&emsp;稍作解释：Fragment就是一个片段，Activity则是一个完整的活动，Activity里面可以灵活引用Fragment。</p>
+<p>&emsp;&emsp;一开始我看Fragment是高级的东西，就没有想到用它，现在后悔了。于是，重新规划了APP的架构。</p>
+<p>&emsp;&emsp;新架构如下：Navigation Drawer作为页面切换的工具，默认展示在首页的是“所有事项”这个Fragment。然后页面的切换就调用<strong>Fragment的切换</strong>来实现。原理是这样的，这些Fragment的调用代码都写在MainActivity里面，MainActivity的Navigation Drawer作为导航，ToolBar的代码则是原封不动，只是添加了一些功能性的代码用于更改标题和变化ToolBar上的功能按钮。（这才是正确思路）</p>
+<p>&emsp;&emsp;然后我的工程就开始了，我需要把原本<code>content_main</code>的各种被include关系全都拆掉，然后在activity_main里面腾出空间，利用代码让Fragment展示出来。嗯…..说出来简单，但是做事情要考虑到历史的进程….这些工程目前耗费了我一个半小时…..对，目前….因为我还没有完成，这个APP目前还不能run…..妈卖皮……</p>
+<p>&emsp;&emsp;祝愿后人能少走些弯路。</p>
 
       
 
@@ -238,15 +241,15 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Bug</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分享</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">心态爆炸</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Android布局</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Fragment</a>
         		</li>
       		
 		</ul>
@@ -258,7 +261,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Android学习经验/" class="article-tag-list-link color2">Android学习经验</a>
+        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
         		</li>
       		
 		</ul>
@@ -313,7 +316,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://wifi9984.github.io/2017/08/22/android-4/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://wifi9984.github.io/2017/08/07/android-bug-fragment/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -327,18 +330,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/09/07/android-app-myblog/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/08/22/android-layout/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          震惊！短短几行代码搞定个人博客APP
+          【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局
         
       </div>
     </a>
   
   
-    <a href="/2017/08/07/android-bug-1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">【Android崩溃经验分享·1】有句妈卖皮我一定要讲</div>
+    <a href="/2017/08/06/android-activity/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">【Android学习经验分享·3】对于Activity的解读</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -370,6 +373,22 @@
   
 
   
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'wifi9984'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+  
 
 
           </div>
@@ -379,7 +398,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 wifi9984
+    		&copy; 2018 Wi-Fi信号覆盖
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -397,7 +416,7 @@
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
-		toc_hide_index: true,
+		toc_hide_index: false,
 		root: "/",
 		innerArchive: true,
 		showTags: true
@@ -582,7 +601,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">相聚其实就是一种缘&lt;/br&gt;&lt;/br&gt;多值得纪念&lt;/br&gt;&lt;/br&gt;</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">相聚其实就是一种缘&lt;/br&gt;多值得纪念</div>
   	  	
     	</section>
     

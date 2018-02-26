@@ -5,21 +5,21 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://wifi9984.github.io">
-  <title>【Andorid学习经验分享·1】刚入坑的时候那些令人窒息的操作 | WiFi9984的个人主页</title>
+  <link rel="dns-prefetch" href="https://wifi9984.github.io">
+  <title>【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局 | WiFi9984的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;emsp;&amp;emsp;续坑。 &amp;emsp;&amp;emsp;这篇讲一讲我自己还是一个刚下定决心入坑Android的小白的时候碰到的种种问题。">
-<meta name="keywords" content="Android,学习,分享">
+  <meta name="description" content="&amp;emsp;&amp;emsp;8-22填坑。这十几天里，闭关了几天研究SQLite，又出去旅行了一周，所以拖更了QAQ &amp;emsp;&amp;emsp;刚开始接触Android开发的时候，如果高中有做过Visual Basic程序设计，就很容易理解所谓的面向对象编程。">
+<meta name="keywords" content="Android,学习,分享,Android布局">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Andorid学习经验分享·1】刚入坑的时候那些令人窒息的操作">
-<meta property="og:url" content="http://wifi9984.github.io/2017/08/01/android-1/index.html">
+<meta property="og:title" content="【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局">
+<meta property="og:url" content="https://wifi9984.github.io/2017/08/22/android-layout/index.html">
 <meta property="og:site_name" content="WiFi9984的个人主页">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;续坑。 &amp;emsp;&amp;emsp;这篇讲一讲我自己还是一个刚下定决心入坑Android的小白的时候碰到的种种问题。">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;8-22填坑。这十几天里，闭关了几天研究SQLite，又出去旅行了一周，所以拖更了QAQ &amp;emsp;&amp;emsp;刚开始接触Android开发的时候，如果高中有做过Visual Basic程序设计，就很容易理解所谓的面向对象编程。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-30T07:57:25.646Z">
+<meta property="og:updated_time" content="2018-02-26T06:08:42.218Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Andorid学习经验分享·1】刚入坑的时候那些令人窒息的操作">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;续坑。 &amp;emsp;&amp;emsp;这篇讲一讲我自己还是一个刚下定决心入坑Android的小白的时候碰到的种种问题。">
+<meta name="twitter:title" content="【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;8-22填坑。这十几天里，闭关了几天研究SQLite，又出去旅行了一周，所以拖更了QAQ &amp;emsp;&amp;emsp;刚开始接触Android开发的时候，如果高中有做过Visual Basic程序设计，就很容易理解所谓的面向对象编程。">
   
     <link rel="alternative" href="/atom.xml" title="WiFi9984的个人主页" type="application/atom+xml">
   
@@ -51,10 +51,10 @@
 			<img src="https://avatars0.githubusercontent.com/u/16449763?v=4&amp;s=460" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">wifi9984</a></h1>
+		  <h1 class="header-author"><a href="/">Wi-Fi信号覆盖</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">Welcome！欢迎访问wifi的小站</p>
+		<p class="header-subtitle">一只Android独立开发者的小站~</p>
 		
 
 		<nav class="header-menu">
@@ -111,10 +111,10 @@
 				<img src="https://avatars0.githubusercontent.com/u/16449763?v=4&amp;s=460" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">wifi9984</h1>
+			  <h1 class="header-author js-header-author">Wi-Fi信号覆盖</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>Welcome！欢迎访问wifi的小站<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>一只Android独立开发者的小站~<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -157,34 +157,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-android-1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-android-layout" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      【Andorid学习经验分享·1】刚入坑的时候那些令人窒息的操作
+      【Android学习经验分享·4】如何快速理解Andoid开发原理-1-布局
     </h1>
   
 
         
-        <a href="/2017/08/01/android-1/" class="archive-article-date">
-  	<time datetime="2017-07-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-01</time>
+        <a href="/2017/08/22/android-layout/" class="archive-article-date">
+  	<time datetime="2017-08-22T00:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&emsp;&emsp;续坑。</p>
-<p>&emsp;&emsp;这篇讲一讲我自己还是一个刚下定决心入坑Android的小白的时候碰到的种种问题。</p>
+        <p>&emsp;&emsp;8-22填坑。这十几天里，闭关了几天研究SQLite，又出去旅行了一周，所以拖更了QAQ</p>
+<p>&emsp;&emsp;刚开始接触Android开发的时候，如果高中有做过Visual Basic程序设计，就很容易理解所谓的面向对象编程。</p>
 <a id="more"></a>
-<h4 id="搭建Java开发环境"><a href="#搭建Java开发环境" class="headerlink" title="搭建Java开发环境"></a>搭建Java开发环境</h4><p>&emsp;&emsp;一开始最头疼的问题就是<strong>开发环境</strong>的搭建了，第一步肯定是从<strong>JDK</strong>的安装开始，啊不，从下载开始。目前最新的JDK版本为1.8(是JDK不是JRE，JRE只是Java运行环境，JDK才是开发包)，在官网选择win x64的版本下载就可以了（32位的机子应该淘汰了）。下载安装后JDK是不能用的，因为需要配置<strong>环境变量</strong>。当时网上Andorid学习资源少之又少，连JDK如何配置都是在IDE报错之后才慢慢学会的。JDK安装最头疼的点就是环境变量的配置了，少打一个分号什么的都会报错。好在现在Windows 10配置环境变量只需增加条目即可，要检验JDK是否安装正确，不用按网上说的输命令测试，只要看看打开Android Studio时是否出现JDK错误就行了（好耿直的方法）。如果你玩过MC（我的世界），那么JDK环境变量配置应该不是个问题。</p>
-<h4 id="安装IDE-Android-Studio"><a href="#安装IDE-Android-Studio" class="headerlink" title="安装IDE(Android Studio)"></a>安装IDE(Android Studio)</h4><p>&emsp;&emsp;Android Studio的下载和安装都不是啥事儿（运行exe在安装目录\bin\studio64.exe）。但是首次打开就能碰上一堆麻烦。比如说，第一次运行，Android Studio会要求你设置<strong>代理（Proxy）</strong>来访问相关的资源链接（Google嘛，你懂的），我用的是ss代理所以配置<strong>代理地址127.0.0.1端口1080</strong>（即使用本机的代理）（考虑到现在ss不给搜。。。先留个方法在这里）然后是选择主题之类的一些个性化设置，英语功底可以的话就很轻松了。然后第一次运行就会下载SDK。主界面的各种操作也是很简单直观，自己体会就OK了。</p>
-<h4 id="Android-SDK"><a href="#Android-SDK" class="headerlink" title="Android SDK"></a>Android SDK</h4><p>&emsp;&emsp;然后还有一个问题就是SDK，SDK全称Software Development Kit（软件开发包），Android SDK通过<strong>SDK Manager</strong>来管理，同样也是<strong>需要代理</strong>的。没有科学上网工具的同学可以在SDK Manager-Tools-Options里面设置成国内的镜像站代理，并且启用HTTPS代理。Android SDK包含了各个版本的SDK以及各种Tools。首先必要的资源在第一次运行Android Studio的时候就会帮你下载好，一些可选的内容在这里讲一下：首先是你认为的开发时常用的Android版本对应的SDK，这个在新建项目的时候会让你选择一个最低运行版本，需要下载对应的SDK。在Android具体系统的SDK文件目录下，system_image为系统镜像，跑虚拟机用，可以不用下载。不管电脑配置咋样我还是<strong>建议用真机进行USB调试</strong>。system_image在AVD Manager里面配置好了就可以运行虚拟机，可以体验一下Android系统的新特性。在设定SDK安装地址的时候不允许包含空格（虽然Windows系统允许空格）。</p>
-<h4 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h4><p>&emsp;&emsp;然后是一个伴随你整个入坑过程的报错源头：Gradle。Gradle是Android的构建工具，用来编译、打包、构建……创建项目、调试项目、发布APK，都会用到Gradle。IDE会自带Gradle，但是不是完整包。建议去Gradle官网下载最新版本的完整包解压到本地C:\Users\admin.gradle\wrapper\dists相应版本的文件夹下，在Android Studio的<strong>setting中启用offline work</strong>，避免无法使用代理造成的各种尴尬。比如，如果你的没有代理裸连Gradle，可能在构建新项目的时候一直卡在“Gradle:build”不动。另外，当你的代码有语法错误的时候Gradle会报错，也就是要调试的话必须保证全部代码没有被红色标记。切记，在打开项目之后，要等到进度条Gradle:build完成后再去写代码。</p>
-<p>&emsp;<br>&emsp;&emsp;——以上是我搭建开发环境时碰到的一些问题，如果你也碰到了或者需要提前防范，记得拿去参考。</p>
+<p>&emsp;&emsp;以高中教科书里的VB为例，VB工程的控件都在一个窗体（Form）里面，控件的实例化需要定义各种属性（比如name，caption，visible….），我们可以针对每个控件创建事件处理代码，比如command1_click。学过VB的同学可以好好回忆一下.</p>
+<p>&emsp;&emsp;在Android里面，工程就是你创建的package（app），窗体可以粗略理解为Activity，控件就是Button，TextView，ImageView……然后，VB里的事件代码，在Android里通过Java代码实现（Kotlin语言目前还没有广泛使用）</p>
+<p>——–分割线——–</p>
+<p>&emsp;&emsp;与VB不同的是，VB窗体可以通过自带网格参考线来定义布局，而Android应用为了适应不同尺寸以及分辨率的显示屏，需要用严谨的布局方式，也就是LinearLayout，RelativeLayout……通过设定布局形式来在不同屏幕上呈现相同的效果<code>知识点：dp的概念</code>。其中的原理就是：VB的窗体可以自由调整大小，大小以px（像素）计算。而手机上，APP默认就是铺满整个屏幕的。而手机屏幕也很复杂，不仅有4.7，5.0，5.5这样的尺寸，也有720P，1080P，2K这样的分辨率。</p>
+<p>&emsp;&emsp;假如用px作为单位，会出现好多问题。</p>
+<p>&emsp;&emsp;问题一：如果你开发的时候设计的是1080P的分辨率，那么这款APP在720P的显示屏上运行的时候，由于分辨率的限制，就无法显示完整的内容，如果在2K屏上运行，就会有一片空白区域。</p>
+<p>&emsp;&emsp;问题二：如果你开发的时候也用1080P，那么在5.5英寸1080P屏幕和5.0寸1080P屏幕上面，整个界面是被按比例缩放的，一个100*60px的按钮，在两个屏幕上的大小就不一样了。</p>
+<p>&emsp;&emsp;解决方法：引入dp的概念。dp=dip:<em>device independent pixels</em>(设备独立像素)，如果一个设备显示屏幕的像素密度为160ppi，那么1dp刚好对应1px。按照比例关系，像素密度越高的屏幕，1dp对应的像素点越多。这样有一个很直接的好处就是，创建一个100*60dp的按钮，放到不同ppi的屏幕下，显示出来的大小是几乎一样的（至于为什么是几乎，可以去了解一下知乎里面的一个问题<a href="https://www.zhihu.com/question/20697111" target="_blank" rel="external">传送门</a>）</p>
+<p>&emsp;&emsp;顺便解释一下上面提到的两个非常常用的基本布局：LinearLayout，RelativeLayout。LinearLayout翻译过来是<strong>线性布局</strong>，就是大致确定布局内部的控件排列方向为横向或者纵向。RelativeLayout翻译过来是<strong>相对布局</strong>，可以确定控件与布局四边的位置和与指定一个控件的相对位置。很多时候这些Layout都是内部<strong>嵌套</strong>着Layout的。用于呈现复杂的UI界面。</p>
+<p>&emsp;&emsp;理解上面几段文字后你大概就明白了为什么布局设计要如此严谨了。以后当你发现Android Studio模拟设备和你手上的真机显示效果不一样时，记得回到XML文件里面去分析一下自己的布局是否严谨。</p>
+<p>&emsp;&emsp;今天就先讲这么一小段吧。后续还会有针对控件的解读（涉及Java类的继承）和针对源码书写（涉及Java语法）的解读。</p>
 
       
 
@@ -239,6 +245,10 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分享</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Android布局</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -249,7 +259,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Android学习经验/" class="article-tag-list-link color2">Android学习经验</a>
+        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
         		</li>
       		
 		</ul>
@@ -304,7 +314,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://wifi9984.github.io/2017/08/01/android-1/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://wifi9984.github.io/2017/08/22/android-layout/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -318,18 +328,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/08/02/android-2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/09/07/android-app-myblog/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          【Android学习经验分享·2】入坑到入土线路规划
+          震惊！短短几行代码搞定个人博客APP
         
       </div>
     </a>
   
   
-    <a href="/2017/07/31/android-pre/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">【前言】【Android学习经验分享】关于这系列笔记的一些事儿</div>
+    <a href="/2017/08/07/android-bug-fragment/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">【Android崩溃经验分享·1】有句妈卖皮我一定要讲</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -361,6 +371,22 @@
   
 
   
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'wifi9984'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+  
 
 
           </div>
@@ -370,7 +396,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 wifi9984
+    		&copy; 2018 Wi-Fi信号覆盖
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -388,7 +414,7 @@
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
-		toc_hide_index: true,
+		toc_hide_index: false,
 		root: "/",
 		innerArchive: true,
 		showTags: true
@@ -573,7 +599,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">相聚其实就是一种缘&lt;/br&gt;&lt;/br&gt;多值得纪念&lt;/br&gt;&lt;/br&gt;</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">相聚其实就是一种缘&lt;/br&gt;多值得纪念</div>
   	  	
     	</section>
     
