@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://wifi9984.github.io/blog">
   <title>【Hexo博客更新-20180228】这个寒假的折腾记录 | WiFi9984的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一只Android独立开发者的小站~">
-<meta name="keywords" content="分享,Hexo,博客,折腾">
+  <meta name="description" content="&amp;emsp;&amp;emsp;正月十四，元宵快乐嗷~（台州人过的是十四） &amp;emsp;&amp;emsp;这个寒假事情比较多，Android方面没有啥进展，倒是博客折腾了一会儿。在这里主要讲讲hugo和hexo的一些取舍，以及hexo主题的定制。">
+<meta name="keywords" content="分享,Hexo,博客,折腾,Hugo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【Hexo博客更新-20180228】这个寒假的折腾记录">
-<meta property="og:url" content="https://wifi9984.github.io/blog/2018/02/28/blog-update-180228/index.html">
+<meta property="og:url" content="https://wifi9984.github.io/blog/2018/03/01/blog-update-180228/index.html">
 <meta property="og:site_name" content="WiFi9984的个人主页">
-<meta property="og:description" content="一只Android独立开发者的小站~">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;正月十四，元宵快乐嗷~（台州人过的是十四） &amp;emsp;&amp;emsp;这个寒假事情比较多，Android方面没有啥进展，倒是博客折腾了一会儿。在这里主要讲讲hugo和hexo的一些取舍，以及hexo主题的定制。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-28T12:45:24.659Z">
+<meta property="og:updated_time" content="2018-03-01T12:37:28.751Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Hexo博客更新-20180228】这个寒假的折腾记录">
-<meta name="twitter:description" content="一只Android独立开发者的小站~">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;正月十四，元宵快乐嗷~（台州人过的是十四） &amp;emsp;&amp;emsp;这个寒假事情比较多，Android方面没有啥进展，倒是博客折腾了一会儿。在这里主要讲讲hugo和hexo的一些取舍，以及hexo主题的定制。">
   
     <link rel="alternative" href="/atom.xml" title="WiFi9984的个人主页" type="application/atom+xml">
   
@@ -178,15 +178,44 @@
   
 
         
-        <a href="/wifi9984.github.io/2018/02/28/blog-update-180228/" class="archive-article-date">
-  	<time datetime="2018-02-28T00:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-28</time>
+        <a href="/wifi9984.github.io/2018/03/01/blog-update-180228/" class="archive-article-date">
+  	<time datetime="2018-03-01T00:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>&emsp;&emsp;正月十四，元宵快乐嗷~（台州人过的是十四）</p>
+<p>&emsp;&emsp;这个寒假事情比较多，Android方面没有啥进展，倒是博客折腾了一会儿。在这里主要讲讲hugo和hexo的一些取舍，以及hexo主题的定制。<br><a id="more"></a><br><!-- TOC --></p>
+<ul>
+<li><a href="#1hugo的正确折腾方式">1.Hugo的<del>正确</del>折腾方式</a><ul>
+<li><a href="#1-1hugo博客的搭建">1-1.Hugo博客的搭建</a></li>
+<li><a href="#1-2hugo的主题库">1-2.Hugo的主题库</a></li>
+<li><a href="#1-3我为什么放弃hugo">1-3.我为什么放弃Hugo</a></li>
+</ul>
+</li>
+<li><a href="#2hexo主题yilia的完善">2.Hexo主题yilia的完善</a></li>
+</ul>
+<!-- /TOC -->
+<h2 id="1-Hugo的正确折腾方式"><a href="#1-Hugo的正确折腾方式" class="headerlink" title="1.Hugo的正确折腾方式"></a>1.Hugo的<del>正确</del>折腾方式</h2><p>&emsp;&emsp;Hugo和Hexo都是时下比较流行的静态博客生成器，也还有Jekyll等……使用起来原理也就是一些主题的个性化配置，以及markdown文章的书写，然后就是用命令行生成网页并部署到服务端了。比起自己手写一个博客，使用静态博客显然是懒人的最佳选择。</p>
+<p>&emsp;&emsp;Hugo是基于Go语言开发的，Hexo则基于Node.js开发。感觉也没有特别明显的差距。从时间上来看，Hugo的发布比Hexo晚，迭代也比Hexo快（最新的Hexo是在16年2约编译发布的）对于爱折腾的人来说，不体验一把Hugo也无法满足自己的好奇心红红火火恍恍惚惚哈哈……</p>
+<h3 id="1-1-Hugo博客的搭建"><a href="#1-1-Hugo博客的搭建" class="headerlink" title="1-1.Hugo博客的搭建"></a>1-1.Hugo博客的搭建</h3><p>&emsp;&emsp;Hugo环境的搭建和Hexo差不多，按着文档来就可以了，至于Git，Go语言包之类的工具…对程序员来说也是小事情了。折腾过Hexo的话用不了几分钟就能搭好。<a href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="external">Hugo QS文档</a></p>
+<p>&emsp;&emsp;在Hugo的Sites目录下是你创建的所有站点，站点目录下有一些文件夹，其中<code>content</code>是存放页面和文章的目录，<code>static</code>存放各种静态资源，<code>themes</code>存放主题，<code>public</code>存放生成后的网页内容。</p>
+<h3 id="1-2-Hugo的主题库"><a href="#1-2-Hugo的主题库" class="headerlink" title="1-2.Hugo的主题库"></a>1-2.Hugo的主题库</h3><p>&emsp;&emsp;Hugo的建站流程很简单，与Hexo不同的是，Hugo没有默认主题，只有从Git上下载。Hugo官网提供的主题比Hexo要多。但是从民间资源来看，Hugo的中文主题没有Hexo的好看……</p>
+<p>&emsp;&emsp;有段时间我把Hugo部署到GitHub Page上取代了Hexo，用的主题是<code>hugo-future-imperfect</code>（<a href="https://themes.gohugo.io/theme/future-imperfect/" target="_blank" rel="external">demo预览</a>）</p>
+<p>&emsp;&emsp;然而，当我用了这款主题之后，我发现对于中文的支持并不好，斜体的Markdown解析会出现问题…也有挺多的小Bug，但是要找一款完美的主题实在是太难了，忍忍就算了。</p>
+<h3 id="1-3-我为什么放弃Hugo"><a href="#1-3-我为什么放弃Hugo" class="headerlink" title="1-3.我为什么放弃Hugo"></a>1-3.我为什么放弃Hugo</h3><p>&emsp;&emsp;首先，生成并部署网页，在Hexo里我只需要<code>hexo g -d</code>，只要在<code>_config.yml</code>里面设置好<code>deploy</code>就可以一句话完成操作，而Hugo则是要手动进行Git操作，对懒癌患者不太友好。</p>
+<p>&emsp;&emsp;and，Hugo的主题看上去茫茫多，但是没有一个用起来称心如意的，还是有点失望的。</p>
+<p>&emsp;&emsp;最后，Hugo迭代很勤快，大概是不稳定吧……还是Hexo这样稳定的工具用起来更舒服</p>
+<h2 id="2-Hexo主题yilia的完善"><a href="#2-Hexo主题yilia的完善" class="headerlink" title="2.Hexo主题yilia的完善"></a>2.Hexo主题yilia的完善</h2><p>&emsp;&emsp;最后我终于被Hugo搞烦了，换回了Hexo，捡回了原来的主题<code>yilia</code>（<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia传送门</a>）</p>
+<p>&emsp;&emsp;从GitHub的PR和issue来看，yilia的作者litten已经把这个主题凉了很久了……好在PR里面有一些bug的修复，可以手动打上。</p>
+<p>&emsp;&emsp;yilia的源码（sass文件、js文件和ejs文件）在<code>source-src</code>里面，如果修改的话需要重新编译，编译后的css文件和js文件会在<code>source</code>里面。</p>
+<p>&emsp;&emsp;如果只是修改某个参数的话，可以先启动本地服务：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;然后用chrome打开后打开开发者工具（F12），可以看到解析后的css（源文件css是压缩的，没有缩进<del>不要慌问题不大</del>），找到对应的字段，在<code>source</code>的<code>main-xxxxxx.css</code>里面搜索字段，修改相应的数据。</p>
+<p>&emsp;&emsp;<strong>然后</strong>，保存后先清除<code>public</code>文件夹下的旧文件，再执行<code>hexo g -d</code>，就可以更新主题了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g -d</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;今天的不定期诈尸就到这里了，马上又要回学校了，又没时间折腾了，掰掰掰掰，给大家拜早年了。</p>
+
       
 
       
@@ -243,6 +272,10 @@
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">折腾</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hugo</a>
         		</li>
       		
 		</ul>
@@ -301,7 +334,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Hugo的正确折腾方式"><span class="toc-number">1.</span> <span class="toc-text">1.Hugo的正确折腾方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Hugo博客的搭建"><span class="toc-number">1.1.</span> <span class="toc-text">1-1.Hugo博客的搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-Hugo的主题库"><span class="toc-number">1.2.</span> <span class="toc-text">1-2.Hugo的主题库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-我为什么放弃Hugo"><span class="toc-number">1.3.</span> <span class="toc-text">1-3.我为什么放弃Hugo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Hexo主题yilia的完善"><span class="toc-number">2.</span> <span class="toc-text">2.Hexo主题yilia的完善</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -482,6 +515,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">折腾</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hugo</a>
               </li>
             
             <div class="clearfix"></div>
