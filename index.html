@@ -65,6 +65,8 @@
 				
 					<li><a style="text-transform:none;" href="/wifi9984.github.io/categories/Blog/">Blog</a></li>
 				
+					<li><a style="text-transform:none;" href="/wifi9984.github.io/categories/微信小程序/">微信小程序</a></li>
+				
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -165,6 +167,128 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-weapp-summary-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/wifi9984.github.io/2018/06/06/weapp-summary-1/">【小程序开发经验分享·前篇】做完蜗壳办公后的一些感触</a>
+    </h1>
+  
+
+        
+        <a href="/wifi9984.github.io/2018/06/06/weapp-summary-1/" class="archive-article-date">
+  	<time datetime="2018-06-06T00:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&emsp;&emsp;前不久刚刚磕完了一个微信小程序项目，创下了人生中的许多记录，还是很值的纪念的。</p>
+<p><em>由于博客文章的TOC目录出了点偏差，先没做目录大家凑合着看先（一定会改的 TAT）</em></p>
+<h2 id="关于这个项目"><a href="#关于这个项目" class="headerlink" title="关于这个项目"></a>关于这个项目</h2><h3 id="为什么要做这个"><a href="#为什么要做这个" class="headerlink" title="为什么要做这个"></a>为什么要做这个</h3><p>&emsp;&emsp;大概在3月中旬的时候，一天出门了在外面……回学校的路上山炮说有个比赛让我了解一下。emmmm，一开始其实我是拒绝的，一看到是小程序……就想起自己是个前端没有扎实的HTML + CSS + JS基础的，这一点其实在刚开始着手做的时候让我很害怕，怕两个月时间甚至都不够我学的。</p>
+<p>&emsp;&emsp;好吧为什么动摇了呢？很简单……这毕竟是个腾讯霸霸举办的比赛啊，首先它有奖金（入围决赛的话低保6K，一等奖3W，特等奖10W），然后只要进决赛就拥有了腾讯入职的绿色通道，虽然官方没有做解释，但是分量差不多也相当于一份鹅厂的Offer了。主要是有钱啊兄弟！（如果能进决赛还能有深圳一周游呢）</p>
+<h3 id="难点在哪里"><a href="#难点在哪里" class="headerlink" title="难点在哪里"></a>难点在哪里</h3><p>&emsp;&emsp;当然为了吹起来更好听一点，我们还是先讲讲做这个项目困难的地方吧：</p>
+<h4 id="组队人数限制"><a href="#组队人数限制" class="headerlink" title="组队人数限制"></a>组队人数限制</h4><p>&emsp;&emsp;首先这个比赛一个组只有3个人……3个人其实很僵硬啊，我们数一下，一个标准配置的开发团队，有那么多的锅：<br><br>1、<strong>产品经理</strong>，负责产品各方面的规划，制定PRD（需求文档）<br><br>2、<strong>小程序前端开发</strong>，开发前端页面<br><br>3、<strong>后端开发</strong>，服务器端的开发，低配团队的话服务器运维也是他的锅<br><br>4、<strong>UI/UX</strong>，这个太关键了吧，程序员的直男审美要是去比赛分分钟刮刮死……<br><br>5、<strong>产品运营</strong>，运营是很容易被计算机专业的人忽略的，运营别提有多关键……而且比赛要求提供的介绍视频为了精致我们也需要运营来搞<br></p>
+<p>&emsp;&emsp;然后对于我们这个零基础团队，开发似乎占了非常大的一口锅……所以最后是我跟山炮两个人背开发的锅，PM兼职UI/UX。由于用的后台是 LeanCloud 的服务，后端我们省去了，整个后台数据存储设计是我来做的。<em>顺便安利<a href="https://leancloud.cn" target="_blank" rel="external">LeanCloud 官网</a></em></p>
+<p>&emsp;&emsp;总的来讲每个人背的锅都是很大的……而且还是零基础（唉三把辛酸泪）</p>
+<p>&emsp;&emsp;欸，大一欸，大一欸！妈的提交之后在比赛群里看到一个老逼的项目介绍：<em>我们是一个研究生团队</em>…cnm我从来没受过这样的委屈.jpg（插入图片太麻烦我就不放了）</p>
+<h4 id="时间限制（TLE）"><a href="#时间限制（TLE）" class="headerlink" title="时间限制（TLE）"></a>时间限制（TLE）</h4><p>&emsp;&emsp;3月30号报名，6月10号截止提交。不说了，时间真的很紧张。现在回头看都觉得之前是多么不可思议。而且**的实验班课还多一点的浪费了很多时间。而且我买了小本子都没时间做岩洞nmh啊……</p>
+<h4 id="心理状况非常惨烈"><a href="#心理状况非常惨烈" class="headerlink" title="心理状况非常惨烈"></a>心理状况非常惨烈</h4><p>&emsp;&emsp;说实话做项目的这两个多月里面我们三个人心态都不是很健康……深受焦虑的困扰，感觉还是造成了不可逆转的精神摧残（智力-4）具体的也不在这里诉苦了，那段时间我的微博也有点惨（/捂脸）</p>
+<p>&emsp;&emsp;总的来讲，我认为做这么个项目，要是过分考虑技术，你就已经凉了。在技术之外的事情，其实需要更多的精力去处理（技术上花的精力也不是瞎逼逼的比如说我的1.6W++ 1W–行代码……）</p>
+<h3 id="后来怎么做成的"><a href="#后来怎么做成的" class="headerlink" title="后来怎么做成的"></a>后来怎么做成的</h3><p>&emsp;&emsp;别问，问就说因为牛逼。</p>
+<p>&emsp;&emsp;其实也就是克服了这几点呗（真的很牛逼了）</p>
+<h3 id="我想体验一下"><a href="#我想体验一下" class="headerlink" title="我想体验一下"></a>我想体验一下</h3><p>&emsp;&emsp;那你继续想吧。</p>
+<p>&emsp;&emsp;其实小程序上线审核已经通过了，比赛结束后再上线吧（让Bug暴露于世）</p>
+<h2 id="关于这系列笔记"><a href="#关于这系列笔记" class="headerlink" title="关于这系列笔记"></a>关于这系列笔记</h2><p>&emsp;&emsp;这系列风格跟我的Android文章一样，<strong>不是开发教程 而是经验分享</strong>。很少会涉及到长篇代码，主要是讲一些方法和技巧。如果你是个小白你可能啥都学不到，如果你是做<code>小程序</code>或者往大了讲做<code>web前端</code>的这会对你有一定的启发。（稍微diss一下890的那位安卓教程学长，写的入门教程还不如让入门的人自己看官方文档）</p>
+<p>&emsp;&emsp;大致的内容如下：</p>
+<p>&emsp;&emsp;前几篇主要是趁期末没事干的时候写一下心得，如果你想做项目的话可以参考一下，感觉能让你刚开始入门的时候心里有点逼数。就是关于项目怎么做，怎么跟别人协作的（哦还有一篇之前Git补坑教程……），做项目过程中各种 <strong>除技术外</strong> 的问题，除这篇外最多两篇吧。</p>
+<p>&emsp;&emsp;然后就是会鸽<del>挺长</del>一阵子，到军训完放暑假的时候回家写一些前端有用的技巧。更新完大概会在空间挂一阵子吧，之前基本上都在微博转更新。（这时候就要安利你们一些技巧了！）</p>
+<h2 id="掉粉时间"><a href="#掉粉时间" class="headerlink" title="掉粉时间"></a>掉粉时间</h2><p>&emsp;&emsp;如何把我的博客放到你的手机主页上呢？</p>
+<h4 id="首先-用浏览器打开我的博客"><a href="#首先-用浏览器打开我的博客" class="headerlink" title="首先  用浏览器打开我的博客"></a>首先  用浏览器打开我的博客</h4><p><a href="https://wifi9984.github.io">传送门</a></p>
+<h4 id="然后-选择添加网页到桌面"><a href="#然后-选择添加网页到桌面" class="headerlink" title="然后  选择添加网页到桌面"></a>然后  选择添加网页到桌面</h4><p><strong>小米用户</strong>：浏览器工具栏右下角的<code>三横</code>点一下 -&gt; <code>工具箱</code> -&gt; <code>添加快捷方式</code> -&gt; <code>手机桌面</code></p>
+<p><strong>苹果用户</strong>：<code>Safari</code>浏览器打开博客 -&gt; 点击中间下部的<code>分享</code>按钮 -&gt; 选择<code>添加到主屏幕</code> -&gt; <code>添加</code></p>
+<p><strong>其他安卓设备</strong>：emmmmm靠悟性或者百度吧。最好用<code>系统自带浏览器</code>打开</p>
+<h4 id="OJBK！"><a href="#OJBK！" class="headerlink" title="OJBK！"></a>OJBK！</h4><p>是不是非常方便，快去试试吧</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分享</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小程序</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目实践</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/wifi9984.github.io/categories/微信小程序/" class="article-tag-list-link color1">微信小程序</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/wifi9984.github.io/2018/06/06/weapp-summary-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-mobile-phone-review" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -1025,100 +1149,10 @@
 
 
   
-    <article id="post-android-pre" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/wifi9984.github.io/2017/07/31/android-pre/">【前言】【Android学习经验分享】关于这系列笔记的一些事儿</a>
-    </h1>
-  
-
-        
-        <a href="/wifi9984.github.io/2017/07/31/android-pre/" class="archive-article-date">
-  	<time datetime="2017-07-31T00:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&emsp;&emsp;咳咳，笔记更新从今晚开始。这一系列笔记会不定时更新。 </p>
-<p>&emsp;&emsp;趁着高三长达3个半月的暑假，我决定在家搞些事情。我自己在自学Android应用程序开发，这篇笔记也算是边学边出教程吧。所以专业的知识点可能会比较粗糙。主要还是希望给<strong>真·真·真·零基础的fresher</strong>提供一些指导。不会出现大量代码，适合同学们用零碎的时间学习借鉴我的方法。希望能帮助到同学们~</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">分享</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/wifi9984.github.io/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/wifi9984.github.io/2017/07/31/android-pre/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/wifi9984.github.io/page/2/">2</a><a class="extend next" rel="next" href="/wifi9984.github.io/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -1282,6 +1316,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">手机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">项目实践</a>
               </li>
             
             <div class="clearfix"></div>
