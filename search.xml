@@ -60,7 +60,7 @@
 <p>&emsp;&emsp;前几篇主要是趁期末没事干的时候写一下心得，如果你想做项目的话可以参考一下，感觉能让你刚开始入门的时候心里有点逼数。就是关于项目怎么做，怎么跟别人协作的（哦还有一篇之前Git补坑教程……），做项目过程中各种 <strong>除技术外</strong> 的问题，除这篇外最多两篇吧。</p>
 <p>&emsp;&emsp;然后就是会鸽<del>挺长</del>一阵子，到军训完放暑假的时候回家写一些前端有用的技巧。更新完大概会在空间挂一阵子吧，之前基本上都在微博转更新。（这时候就要安利你们一些技巧了！）</p>
 <h2 id="掉粉时间"><a href="#掉粉时间" class="headerlink" title="掉粉时间"></a>掉粉时间</h2><p>&emsp;&emsp;如何把我的博客放到你的手机主页上呢？</p>
-<h4 id="首先-用浏览器打开我的博客"><a href="#首先-用浏览器打开我的博客" class="headerlink" title="首先  用浏览器打开我的博客"></a>首先  用浏览器打开我的博客</h4><p><a href="https://wifi9984.github.io">传送门</a></p>
+<h4 id="首先-用浏览器打开我的博客"><a href="#首先-用浏览器打开我的博客" class="headerlink" title="首先  用浏览器打开我的博客"></a>首先  用浏览器打开我的博客</h4><p><a href="https://wifi9984.github.io" target="_blank" rel="external">传送门</a></p>
 <h4 id="然后-选择添加网页到桌面"><a href="#然后-选择添加网页到桌面" class="headerlink" title="然后  选择添加网页到桌面"></a>然后  选择添加网页到桌面</h4><p><strong>小米用户</strong>：浏览器工具栏右下角的<code>三横</code>点一下 -&gt; <code>工具箱</code> -&gt; <code>添加快捷方式</code> -&gt; <code>手机桌面</code></p>
 <p><strong>苹果用户</strong>：<code>Safari</code>浏览器打开博客 -&gt; 点击中间下部的<code>分享</code>按钮 -&gt; 选择<code>添加到主屏幕</code> -&gt; <code>添加</code></p>
 <p><strong>其他安卓设备</strong>：emmmmm靠悟性或者百度吧。最好用<code>系统自带浏览器</code>打开</p>
@@ -172,11 +172,11 @@
             
             <tag> Hexo </tag>
             
+            <tag> Hugo </tag>
+            
             <tag> 博客 </tag>
             
             <tag> 折腾 </tag>
-            
-            <tag> Hugo </tag>
             
         </tags>
         
